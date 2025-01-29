@@ -1,16 +1,35 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using WayOfBlood.Character.Player;
 
-public class GameManager : MonoBehaviour
+namespace WayOfBlood.GameManager
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class GameManager : MonoBehaviour
     {
-        
-    }
+        [SerializeField] GameObject DefeatScreen;
 
-    // Update is called once per frame
-    void Update()
-    {
+        private PlayerController playerController;
+
+        private void Start()
+        {
+            playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+            playerController.OnDeath += OnDeathPlayer;
+        }
         
+        private void OnDeathPlayer()
+        {
+            DefeatScreen.SetActive(true);
+        }
+
+        public void RestartGame()
+        {
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentSceneIndex);
+        }
+
+        private void OnDestroy()
+        {
+            playerController.OnDeath -= OnDeathPlayer;
+        }
     }
 }
