@@ -635,7 +635,27 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skeleton_default_walk_E_0.0_5_0: 1517579448431673823
+      skeleton_default_walk_E_0.0_5_1: 1197133085995834385
+      skeleton_default_walk_E_0.0_5_10: -5664102718875990826
+      skeleton_default_walk_E_0.0_5_11: -7296014827834910846
+      skeleton_default_walk_E_0.0_5_12: 546793845196630237
+      skeleton_default_walk_E_0.0_5_13: 923620676528005872
+      skeleton_default_walk_E_0.0_5_14: 6464023926355748809
+      skeleton_default_walk_E_0.0_5_15: -7109924991523029370
+      skeleton_default_walk_E_0.0_5_16: -620519842732837877
+      skeleton_default_walk_E_0.0_5_17: -1361234213729366525
+      skeleton_default_walk_E_0.0_5_18: -8486046636674336236
+      skeleton_default_walk_E_0.0_5_19: -8378875795112680276
+      skeleton_default_walk_E_0.0_5_2: 1637045813625619106
+      skeleton_default_walk_E_0.0_5_3: -125329522416769214
+      skeleton_default_walk_E_0.0_5_4: -226420797747396156
+      skeleton_default_walk_E_0.0_5_5: 8683898764173762312
+      skeleton_default_walk_E_0.0_5_6: 5170797913839513167
+      skeleton_default_walk_E_0.0_5_7: 367590367648820603
+      skeleton_default_walk_E_0.0_5_8: -65194472292268409
+      skeleton_default_walk_E_0.0_5_9: 3076674907031724780
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

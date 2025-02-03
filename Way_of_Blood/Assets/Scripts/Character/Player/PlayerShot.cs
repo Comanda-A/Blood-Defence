@@ -1,7 +1,5 @@
 using UnityEngine;
-using UnityEngine.Events;
-using WayOfBlood.Input;
-using WayOfBlood.Shooting;
+using UnityEngine.InputSystem;
 
 namespace WayOfBlood.Character.Player
 {
@@ -10,35 +8,43 @@ namespace WayOfBlood.Character.Player
         public float ShotRadius = 1f;
 
         private new Transform transform;
-        private InputBase playerInputSystem;
         private Camera mainCamera;
+        private CharacterMovement characterMovement; 
+        private InputAction shotAction;
 
         void Start()
         {
             transform = GetComponent<Transform>();
-            playerInputSystem = GetComponent<InputBase>();
-            mainCamera = Camera.main; // Получаем основную камеру
+            mainCamera = Camera.main;
+            characterMovement = GetComponent<CharacterMovement>();
+            shotAction = InputSystem.actions.FindAction("Shot");
+            shotAction.performed += ShotHandler;
         }
 
-        void Update()
+        private void ShotHandler(InputAction.CallbackContext context)
         {
-            // Проверяем, нажата ли клавиша выстрела и прошла ли задержка
-            if (playerInputSystem.ShotKeyPressed && Time.time > lastShotTime + ShotCooldown)
+            if (Time.time < lastShotTime + ShotCooldown)
+                return;
+            
+            Vector2 direction = Vector2.zero;
+
+            if (context.control.device is Mouse)
             {
-                Shoot();
+                Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+                direction = ((Vector2)(mousePosition - transform.position)).normalized;
             }
-        }
-
-        private void Shoot()
-        {
-            // Получаем позицию курсора в мировых координатах
-            Vector3 mousePosition = mainCamera.ScreenToWorldPoint(UnityEngine.Input.mousePosition);
-
-            // Вычисляем направление от игрока к курсору
-            Vector2 direction = ((Vector2)(mousePosition - transform.position)).normalized;
-            print(direction.magnitude);
+            else
+            {
+                direction = characterMovement.ViewDirection;
+            }
 
             Shot((Vector2)transform.position + direction * ShotRadius, direction);
+            
+        }
+
+        private void OnDestroy()
+        {
+            shotAction.performed -= ShotHandler;
         }
     }
 }

@@ -30,9 +30,9 @@ namespace WayOfBlood.Character
         {
             if (Time.time > lastAttackTime + AttackCooldown)
             {
+                lastAttackTime = Time.time;
                 ProcessAttack();
                 OnAttack?.Invoke();
-                lastAttackTime = Time.time;
             }
         }
 

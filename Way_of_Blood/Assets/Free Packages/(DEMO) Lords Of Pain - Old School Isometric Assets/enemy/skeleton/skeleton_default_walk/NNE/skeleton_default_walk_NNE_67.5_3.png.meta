@@ -885,7 +885,37 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skeleton_default_walk_NNE_67.5_3_0: -4177294017649024366
+      skeleton_default_walk_NNE_67.5_3_1: 3818438347340955032
+      skeleton_default_walk_NNE_67.5_3_10: 7768900140865046371
+      skeleton_default_walk_NNE_67.5_3_11: 9179244134238629877
+      skeleton_default_walk_NNE_67.5_3_12: 5052788938669085344
+      skeleton_default_walk_NNE_67.5_3_13: -670718017980331363
+      skeleton_default_walk_NNE_67.5_3_14: 7175973346419288824
+      skeleton_default_walk_NNE_67.5_3_15: 3578165349713194680
+      skeleton_default_walk_NNE_67.5_3_16: 5787508635170704569
+      skeleton_default_walk_NNE_67.5_3_17: -1900597090023645487
+      skeleton_default_walk_NNE_67.5_3_18: -4217626142235159550
+      skeleton_default_walk_NNE_67.5_3_19: -5651416015236008406
+      skeleton_default_walk_NNE_67.5_3_2: -2290551360669814766
+      skeleton_default_walk_NNE_67.5_3_20: 1778580877291986701
+      skeleton_default_walk_NNE_67.5_3_21: 7943298877168791241
+      skeleton_default_walk_NNE_67.5_3_22: 6419650772990319633
+      skeleton_default_walk_NNE_67.5_3_23: -7658201639975181997
+      skeleton_default_walk_NNE_67.5_3_24: -6795434311545700274
+      skeleton_default_walk_NNE_67.5_3_25: 5790589372417571882
+      skeleton_default_walk_NNE_67.5_3_26: 2802242051444502111
+      skeleton_default_walk_NNE_67.5_3_27: -3643739477856998992
+      skeleton_default_walk_NNE_67.5_3_28: 7345294033319919743
+      skeleton_default_walk_NNE_67.5_3_29: -718699980759269237
+      skeleton_default_walk_NNE_67.5_3_3: -8771624603077740063
+      skeleton_default_walk_NNE_67.5_3_4: 5142745425884727624
+      skeleton_default_walk_NNE_67.5_3_5: 7678251562928704913
+      skeleton_default_walk_NNE_67.5_3_6: -3982305991923985465
+      skeleton_default_walk_NNE_67.5_3_7: -4271950369037611449
+      skeleton_default_walk_NNE_67.5_3_8: -4806944946686458845
+      skeleton_default_walk_NNE_67.5_3_9: 5762099066049732561
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

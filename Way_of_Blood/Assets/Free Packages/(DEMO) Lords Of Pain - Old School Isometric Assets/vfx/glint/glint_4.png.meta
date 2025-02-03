@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      glint_4_0: -4525430582241344714
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

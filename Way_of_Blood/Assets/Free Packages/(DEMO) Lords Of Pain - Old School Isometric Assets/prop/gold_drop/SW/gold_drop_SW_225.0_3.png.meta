@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gold_drop_SW_225.0_3_0: -3729506077623253645
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

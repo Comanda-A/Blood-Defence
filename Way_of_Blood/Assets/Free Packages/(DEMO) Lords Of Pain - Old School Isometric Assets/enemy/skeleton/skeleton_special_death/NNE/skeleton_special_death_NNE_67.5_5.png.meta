@@ -285,7 +285,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skeleton_special_death_NNE_67.5_5_0: 2337671804489159584
+      skeleton_special_death_NNE_67.5_5_1: -2315041574652852543
+      skeleton_special_death_NNE_67.5_5_2: -5373127242978488077
+      skeleton_special_death_NNE_67.5_5_3: -8338568614252921624
+      skeleton_special_death_NNE_67.5_5_4: -8640316666830668372
+      skeleton_special_death_NNE_67.5_5_5: -5317629057667463781
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

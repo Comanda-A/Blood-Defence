@@ -885,7 +885,37 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skeleton_default_walk_E_0.0_4_0: 5460762263054406156
+      skeleton_default_walk_E_0.0_4_1: 9000941104788910216
+      skeleton_default_walk_E_0.0_4_10: 8314612654902757351
+      skeleton_default_walk_E_0.0_4_11: -8256433851446110021
+      skeleton_default_walk_E_0.0_4_12: -4803102599668844841
+      skeleton_default_walk_E_0.0_4_13: 4139849258433442840
+      skeleton_default_walk_E_0.0_4_14: -2932543218171524560
+      skeleton_default_walk_E_0.0_4_15: -2885431728675039677
+      skeleton_default_walk_E_0.0_4_16: 17325763089543471
+      skeleton_default_walk_E_0.0_4_17: -1069785005812066585
+      skeleton_default_walk_E_0.0_4_18: 3739235342948127600
+      skeleton_default_walk_E_0.0_4_19: 219575546376947526
+      skeleton_default_walk_E_0.0_4_2: -734260674744750031
+      skeleton_default_walk_E_0.0_4_20: -3826104896209025201
+      skeleton_default_walk_E_0.0_4_21: -8512531204040183353
+      skeleton_default_walk_E_0.0_4_22: 6310089496496625733
+      skeleton_default_walk_E_0.0_4_23: 4913943836423620800
+      skeleton_default_walk_E_0.0_4_24: 6103084221972017884
+      skeleton_default_walk_E_0.0_4_25: -6252732589022908298
+      skeleton_default_walk_E_0.0_4_26: 1046374524903330017
+      skeleton_default_walk_E_0.0_4_27: -1086975395824929246
+      skeleton_default_walk_E_0.0_4_28: -3176674945999672592
+      skeleton_default_walk_E_0.0_4_29: 6998274493928593600
+      skeleton_default_walk_E_0.0_4_3: 4929024833224050220
+      skeleton_default_walk_E_0.0_4_4: -1722835002349386426
+      skeleton_default_walk_E_0.0_4_5: -7055015357320750002
+      skeleton_default_walk_E_0.0_4_6: -6543296221388896489
+      skeleton_default_walk_E_0.0_4_7: -3091538783643342842
+      skeleton_default_walk_E_0.0_4_8: -640140371026999144
+      skeleton_default_walk_E_0.0_4_9: -8472907055691097246
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

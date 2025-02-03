@@ -785,7 +785,33 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skeleton_special_death_S_270.0_0_0: 872228279934502879
+      skeleton_special_death_S_270.0_0_1: 2243945647520917399
+      skeleton_special_death_S_270.0_0_10: -3793465499673538563
+      skeleton_special_death_S_270.0_0_11: 434565563208750975
+      skeleton_special_death_S_270.0_0_12: -1216915062400195201
+      skeleton_special_death_S_270.0_0_13: 3473456195527165478
+      skeleton_special_death_S_270.0_0_14: -471075057520921826
+      skeleton_special_death_S_270.0_0_15: 1285790871860908501
+      skeleton_special_death_S_270.0_0_16: -5318892069256062538
+      skeleton_special_death_S_270.0_0_17: 3601324723936859344
+      skeleton_special_death_S_270.0_0_18: 2956834780348208002
+      skeleton_special_death_S_270.0_0_19: -2773703296454085283
+      skeleton_special_death_S_270.0_0_2: 6315247575670735854
+      skeleton_special_death_S_270.0_0_20: 6046975681343258433
+      skeleton_special_death_S_270.0_0_21: 4145509545919287232
+      skeleton_special_death_S_270.0_0_22: -3982345931053710506
+      skeleton_special_death_S_270.0_0_23: -3466258063054000782
+      skeleton_special_death_S_270.0_0_24: 7682428871662681994
+      skeleton_special_death_S_270.0_0_25: -4239091012816459209
+      skeleton_special_death_S_270.0_0_3: 6067789933127386063
+      skeleton_special_death_S_270.0_0_4: 3949917675539830928
+      skeleton_special_death_S_270.0_0_5: -8904474580311457900
+      skeleton_special_death_S_270.0_0_6: -2988914812476550006
+      skeleton_special_death_S_270.0_0_7: 4842965384335731626
+      skeleton_special_death_S_270.0_0_8: -7023303685017085021
+      skeleton_special_death_S_270.0_0_9: 6862808280005967593
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

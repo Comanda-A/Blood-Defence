@@ -810,7 +810,34 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skeleton_default_walk_SEE_337.5_4_0: 3792684177572552429
+      skeleton_default_walk_SEE_337.5_4_1: 4954619659547363180
+      skeleton_default_walk_SEE_337.5_4_10: -4834619923081187549
+      skeleton_default_walk_SEE_337.5_4_11: -7273664251039668317
+      skeleton_default_walk_SEE_337.5_4_12: -3347420606789882443
+      skeleton_default_walk_SEE_337.5_4_13: 8676931877693375992
+      skeleton_default_walk_SEE_337.5_4_14: 4826432565925434400
+      skeleton_default_walk_SEE_337.5_4_15: 5969196099484517872
+      skeleton_default_walk_SEE_337.5_4_16: 2086532936542619465
+      skeleton_default_walk_SEE_337.5_4_17: -4720263067970010806
+      skeleton_default_walk_SEE_337.5_4_18: -5234661392057135310
+      skeleton_default_walk_SEE_337.5_4_19: 7673386857984016267
+      skeleton_default_walk_SEE_337.5_4_2: 6071658800324603366
+      skeleton_default_walk_SEE_337.5_4_20: 8477935359315903864
+      skeleton_default_walk_SEE_337.5_4_21: 2104844245381123738
+      skeleton_default_walk_SEE_337.5_4_22: -2913968297114800647
+      skeleton_default_walk_SEE_337.5_4_23: -67859637033921766
+      skeleton_default_walk_SEE_337.5_4_24: 3116965381360887631
+      skeleton_default_walk_SEE_337.5_4_25: 8384197326486602302
+      skeleton_default_walk_SEE_337.5_4_26: -5051715821792431918
+      skeleton_default_walk_SEE_337.5_4_3: 2021298453669915138
+      skeleton_default_walk_SEE_337.5_4_4: -6956387567192886451
+      skeleton_default_walk_SEE_337.5_4_5: -1400870541454913859
+      skeleton_default_walk_SEE_337.5_4_6: 267286032209439946
+      skeleton_default_walk_SEE_337.5_4_7: -8184822790882617859
+      skeleton_default_walk_SEE_337.5_4_8: -4626535049662770566
+      skeleton_default_walk_SEE_337.5_4_9: -8001957932091418523
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

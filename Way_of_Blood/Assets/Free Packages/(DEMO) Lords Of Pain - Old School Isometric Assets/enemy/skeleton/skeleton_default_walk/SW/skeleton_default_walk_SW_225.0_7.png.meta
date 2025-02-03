@@ -860,7 +860,36 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skeleton_default_walk_SW_225.0_7_0: 1137564531471424527
+      skeleton_default_walk_SW_225.0_7_1: 6082209472090577675
+      skeleton_default_walk_SW_225.0_7_10: -95330370536192485
+      skeleton_default_walk_SW_225.0_7_11: 6367386983834485245
+      skeleton_default_walk_SW_225.0_7_12: -3639856730220401243
+      skeleton_default_walk_SW_225.0_7_13: -5643369025942318261
+      skeleton_default_walk_SW_225.0_7_14: -6380675981156420154
+      skeleton_default_walk_SW_225.0_7_15: 7808170406236777595
+      skeleton_default_walk_SW_225.0_7_16: 3784072429361562338
+      skeleton_default_walk_SW_225.0_7_17: 1034748579891080110
+      skeleton_default_walk_SW_225.0_7_18: -8748393850908405007
+      skeleton_default_walk_SW_225.0_7_19: 679465215662656349
+      skeleton_default_walk_SW_225.0_7_2: -1245382563087141881
+      skeleton_default_walk_SW_225.0_7_20: 828204031250323917
+      skeleton_default_walk_SW_225.0_7_21: -5054407539037370719
+      skeleton_default_walk_SW_225.0_7_22: 1951567030525556633
+      skeleton_default_walk_SW_225.0_7_23: -6039827898404345743
+      skeleton_default_walk_SW_225.0_7_24: -1355771156473323168
+      skeleton_default_walk_SW_225.0_7_25: 4870190107838820794
+      skeleton_default_walk_SW_225.0_7_26: 1525003138653438770
+      skeleton_default_walk_SW_225.0_7_27: -7660074673605045219
+      skeleton_default_walk_SW_225.0_7_28: -5347246999788854824
+      skeleton_default_walk_SW_225.0_7_3: 8991874063217095241
+      skeleton_default_walk_SW_225.0_7_4: 2174146847632411128
+      skeleton_default_walk_SW_225.0_7_5: 3583814400788160392
+      skeleton_default_walk_SW_225.0_7_6: -9029482236904675618
+      skeleton_default_walk_SW_225.0_7_7: 6206633043303246182
+      skeleton_default_walk_SW_225.0_7_8: 8496560519278092526
+      skeleton_default_walk_SW_225.0_7_9: 5824648933189258133
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

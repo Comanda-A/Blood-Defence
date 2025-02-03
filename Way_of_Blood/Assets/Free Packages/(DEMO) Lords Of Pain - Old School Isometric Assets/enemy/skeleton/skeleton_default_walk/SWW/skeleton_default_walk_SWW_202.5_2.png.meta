@@ -1010,7 +1010,42 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skeleton_default_walk_SWW_202.5_2_0: 1950010558126072635
+      skeleton_default_walk_SWW_202.5_2_1: -2347347876426837323
+      skeleton_default_walk_SWW_202.5_2_10: 4569281804603214544
+      skeleton_default_walk_SWW_202.5_2_11: -3889743478770828669
+      skeleton_default_walk_SWW_202.5_2_12: 7207683397456698269
+      skeleton_default_walk_SWW_202.5_2_13: -679032149777022880
+      skeleton_default_walk_SWW_202.5_2_14: 673387710327706945
+      skeleton_default_walk_SWW_202.5_2_15: -7623399731758411729
+      skeleton_default_walk_SWW_202.5_2_16: -1992834987099449462
+      skeleton_default_walk_SWW_202.5_2_17: -8531443959752139442
+      skeleton_default_walk_SWW_202.5_2_18: 508874999467480184
+      skeleton_default_walk_SWW_202.5_2_19: -6471343453031036386
+      skeleton_default_walk_SWW_202.5_2_2: 1621745184007387366
+      skeleton_default_walk_SWW_202.5_2_20: 2643353572644326719
+      skeleton_default_walk_SWW_202.5_2_21: -7924997052243465189
+      skeleton_default_walk_SWW_202.5_2_22: 4915612043153511652
+      skeleton_default_walk_SWW_202.5_2_23: -2592035030126862976
+      skeleton_default_walk_SWW_202.5_2_24: 5718405508732541623
+      skeleton_default_walk_SWW_202.5_2_25: -2058156867277839393
+      skeleton_default_walk_SWW_202.5_2_26: -7508719038335886662
+      skeleton_default_walk_SWW_202.5_2_27: -5819165671653503115
+      skeleton_default_walk_SWW_202.5_2_28: 8403866664594079762
+      skeleton_default_walk_SWW_202.5_2_29: 8334253939366027101
+      skeleton_default_walk_SWW_202.5_2_3: 3005527930268360331
+      skeleton_default_walk_SWW_202.5_2_30: -3278143091749295582
+      skeleton_default_walk_SWW_202.5_2_31: 5715746368772712900
+      skeleton_default_walk_SWW_202.5_2_32: 3278416229186990758
+      skeleton_default_walk_SWW_202.5_2_33: 5647072687734128841
+      skeleton_default_walk_SWW_202.5_2_34: 2686212587792177822
+      skeleton_default_walk_SWW_202.5_2_4: -2736516497599435386
+      skeleton_default_walk_SWW_202.5_2_5: -4625434021470850201
+      skeleton_default_walk_SWW_202.5_2_6: -4662581592767124744
+      skeleton_default_walk_SWW_202.5_2_7: -6761174062984539601
+      skeleton_default_walk_SWW_202.5_2_8: -7195958676034137480
+      skeleton_default_walk_SWW_202.5_2_9: 4836581052406907636
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

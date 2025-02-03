@@ -9,6 +9,7 @@ namespace WayOfBlood.Character
         public AudioClip StepAudio2;    // Звук шага
         public AudioClip AttackAudio;   // Звук атаки
         public AudioClip ShotAudio;     // Звук выстрела
+        public AudioClip KickAudio;     // Звук выстрела
 
         [SerializeField] private AudioSource audioSource;
 
@@ -31,12 +32,31 @@ namespace WayOfBlood.Character
 
             // Подписываемся на событие выстрела
             GetComponent<CharacterShot>().OnShot += PlayShotSound;
+
+            if (TryGetComponent<СharacterKick>(out var сharacterKick))
+            {
+                сharacterKick.OnKick += PlayKickSound;
+            }
         }
 
         private void Update()
         {
             if (characterMovement.MoveDirection != null)
                 PlayStepSound();
+        }
+
+        public void PlaySound(AudioClip audio)
+        {
+            audioSource.PlayOneShot(audio);
+        }    
+
+        // Метод для воспроизведения звука удара ногой
+        public void PlayKickSound()
+        {
+            if (KickAudio != null)
+            {
+                audioSource.PlayOneShot(KickAudio);
+            }
         }
 
         // Метод для воспроизведения звука атаки

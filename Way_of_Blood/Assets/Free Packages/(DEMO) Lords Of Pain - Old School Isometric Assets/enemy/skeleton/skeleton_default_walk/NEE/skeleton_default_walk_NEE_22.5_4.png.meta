@@ -1210,7 +1210,50 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skeleton_default_walk_NEE_22.5_4_0: 7627235845764453514
+      skeleton_default_walk_NEE_22.5_4_1: -5458148372281217046
+      skeleton_default_walk_NEE_22.5_4_10: 9123669945050996758
+      skeleton_default_walk_NEE_22.5_4_11: 6817718776578981891
+      skeleton_default_walk_NEE_22.5_4_12: 4665493241474946456
+      skeleton_default_walk_NEE_22.5_4_13: -8314315375330225211
+      skeleton_default_walk_NEE_22.5_4_14: -5772646433936512707
+      skeleton_default_walk_NEE_22.5_4_15: -8210450459025436111
+      skeleton_default_walk_NEE_22.5_4_16: -798038077013174567
+      skeleton_default_walk_NEE_22.5_4_17: -7143521685658128704
+      skeleton_default_walk_NEE_22.5_4_18: 3221519045237215629
+      skeleton_default_walk_NEE_22.5_4_19: -3544465579660456628
+      skeleton_default_walk_NEE_22.5_4_2: -3981586107248437388
+      skeleton_default_walk_NEE_22.5_4_20: 7689756244966758207
+      skeleton_default_walk_NEE_22.5_4_21: -2310679239050788553
+      skeleton_default_walk_NEE_22.5_4_22: 9096393974072699487
+      skeleton_default_walk_NEE_22.5_4_23: -2886897762152789194
+      skeleton_default_walk_NEE_22.5_4_24: 1605993480125046510
+      skeleton_default_walk_NEE_22.5_4_25: -5292334947300998219
+      skeleton_default_walk_NEE_22.5_4_26: 7470424849340246752
+      skeleton_default_walk_NEE_22.5_4_27: -2584818233717661990
+      skeleton_default_walk_NEE_22.5_4_28: -8100398312757281671
+      skeleton_default_walk_NEE_22.5_4_29: 5575993022119700149
+      skeleton_default_walk_NEE_22.5_4_3: 7966408807991795133
+      skeleton_default_walk_NEE_22.5_4_30: 8583325867431048185
+      skeleton_default_walk_NEE_22.5_4_31: -5523770999301250534
+      skeleton_default_walk_NEE_22.5_4_32: -8176271828881506025
+      skeleton_default_walk_NEE_22.5_4_33: -6441317510487443869
+      skeleton_default_walk_NEE_22.5_4_34: -3778901184870850657
+      skeleton_default_walk_NEE_22.5_4_35: -4764274022784946677
+      skeleton_default_walk_NEE_22.5_4_36: -3007551065132902316
+      skeleton_default_walk_NEE_22.5_4_37: 7587734513835950109
+      skeleton_default_walk_NEE_22.5_4_38: -7467376155527985837
+      skeleton_default_walk_NEE_22.5_4_39: -8832629294780001777
+      skeleton_default_walk_NEE_22.5_4_4: -2967184756701310741
+      skeleton_default_walk_NEE_22.5_4_40: 1851047989043742422
+      skeleton_default_walk_NEE_22.5_4_41: -476971688164074532
+      skeleton_default_walk_NEE_22.5_4_42: -2045046808619327137
+      skeleton_default_walk_NEE_22.5_4_5: 3951023311669761806
+      skeleton_default_walk_NEE_22.5_4_6: -9069214704520559944
+      skeleton_default_walk_NEE_22.5_4_7: 7661642507467468203
+      skeleton_default_walk_NEE_22.5_4_8: 8543520432777559299
+      skeleton_default_walk_NEE_22.5_4_9: -2405219432263777545
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

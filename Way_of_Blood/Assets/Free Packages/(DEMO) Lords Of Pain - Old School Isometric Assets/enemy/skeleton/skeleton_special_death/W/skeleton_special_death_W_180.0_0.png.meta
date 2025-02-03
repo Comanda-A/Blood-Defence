@@ -910,7 +910,38 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skeleton_special_death_W_180.0_0_0: 3274758012354315905
+      skeleton_special_death_W_180.0_0_1: 1080361614185301996
+      skeleton_special_death_W_180.0_0_10: 9085666109063021099
+      skeleton_special_death_W_180.0_0_11: -549751168069993224
+      skeleton_special_death_W_180.0_0_12: 1973507222251156115
+      skeleton_special_death_W_180.0_0_13: 5544251459203440448
+      skeleton_special_death_W_180.0_0_14: -7835407118430762079
+      skeleton_special_death_W_180.0_0_15: -10571407558354491
+      skeleton_special_death_W_180.0_0_16: -7729878433937360570
+      skeleton_special_death_W_180.0_0_17: -4795510898582946555
+      skeleton_special_death_W_180.0_0_18: -7094897895475311453
+      skeleton_special_death_W_180.0_0_19: -1923761221506729528
+      skeleton_special_death_W_180.0_0_2: 223266253925684710
+      skeleton_special_death_W_180.0_0_20: -8246221105291979656
+      skeleton_special_death_W_180.0_0_21: 5013268230437956683
+      skeleton_special_death_W_180.0_0_22: 7296272302785529644
+      skeleton_special_death_W_180.0_0_23: 4260177861023645199
+      skeleton_special_death_W_180.0_0_24: 7386474809326964850
+      skeleton_special_death_W_180.0_0_25: 8914047651159719762
+      skeleton_special_death_W_180.0_0_26: -8607142482228960390
+      skeleton_special_death_W_180.0_0_27: -6217138622050095150
+      skeleton_special_death_W_180.0_0_28: -18956270420677494
+      skeleton_special_death_W_180.0_0_29: 57674089585265799
+      skeleton_special_death_W_180.0_0_3: -4676482678381337865
+      skeleton_special_death_W_180.0_0_30: 6847226715791682669
+      skeleton_special_death_W_180.0_0_4: 8287464164083287039
+      skeleton_special_death_W_180.0_0_5: -5966153016978443418
+      skeleton_special_death_W_180.0_0_6: -4379723014266745911
+      skeleton_special_death_W_180.0_0_7: -5429174538169819291
+      skeleton_special_death_W_180.0_0_8: 4775014670892965859
+      skeleton_special_death_W_180.0_0_9: -7185164384455052418
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

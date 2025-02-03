@@ -1710,7 +1710,70 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      warrior_armed_walk_SWW_202.5_7_0: -1280395574935865547
+      warrior_armed_walk_SWW_202.5_7_1: -3831960021078139356
+      warrior_armed_walk_SWW_202.5_7_10: -4038273213853303372
+      warrior_armed_walk_SWW_202.5_7_11: 4936807105482449052
+      warrior_armed_walk_SWW_202.5_7_12: 8665121120212845225
+      warrior_armed_walk_SWW_202.5_7_13: -3409816772203742433
+      warrior_armed_walk_SWW_202.5_7_14: 1217769046208995499
+      warrior_armed_walk_SWW_202.5_7_15: -1506569501209277574
+      warrior_armed_walk_SWW_202.5_7_16: 2463979753708810850
+      warrior_armed_walk_SWW_202.5_7_17: -7910981849298554062
+      warrior_armed_walk_SWW_202.5_7_18: -7526692952950293628
+      warrior_armed_walk_SWW_202.5_7_19: -7743254465544890764
+      warrior_armed_walk_SWW_202.5_7_2: -1331504676694295464
+      warrior_armed_walk_SWW_202.5_7_20: 6515943935745920628
+      warrior_armed_walk_SWW_202.5_7_21: 1090270009055103866
+      warrior_armed_walk_SWW_202.5_7_22: 687094806672809288
+      warrior_armed_walk_SWW_202.5_7_23: -643388067724285691
+      warrior_armed_walk_SWW_202.5_7_24: 7698091166495515398
+      warrior_armed_walk_SWW_202.5_7_25: -8384177364847552615
+      warrior_armed_walk_SWW_202.5_7_26: -8614316885151462099
+      warrior_armed_walk_SWW_202.5_7_27: -6915303134484754229
+      warrior_armed_walk_SWW_202.5_7_28: 8500723759195092011
+      warrior_armed_walk_SWW_202.5_7_29: 3741507405307114103
+      warrior_armed_walk_SWW_202.5_7_3: -618371348298063319
+      warrior_armed_walk_SWW_202.5_7_30: -1100024182937074073
+      warrior_armed_walk_SWW_202.5_7_31: -6948456340022922415
+      warrior_armed_walk_SWW_202.5_7_32: -1754378261431050496
+      warrior_armed_walk_SWW_202.5_7_33: -2955212678365669229
+      warrior_armed_walk_SWW_202.5_7_34: -8437466910328739674
+      warrior_armed_walk_SWW_202.5_7_35: 5967327353680558489
+      warrior_armed_walk_SWW_202.5_7_36: -1684006090651720164
+      warrior_armed_walk_SWW_202.5_7_37: 849223204100416856
+      warrior_armed_walk_SWW_202.5_7_38: 705814185634340376
+      warrior_armed_walk_SWW_202.5_7_39: 6908828986853231155
+      warrior_armed_walk_SWW_202.5_7_4: -1325589224419329174
+      warrior_armed_walk_SWW_202.5_7_40: 1028706507752297479
+      warrior_armed_walk_SWW_202.5_7_41: 7246523986145927712
+      warrior_armed_walk_SWW_202.5_7_42: 3947155588489398864
+      warrior_armed_walk_SWW_202.5_7_43: 8635001574424178594
+      warrior_armed_walk_SWW_202.5_7_44: 5125505427266203681
+      warrior_armed_walk_SWW_202.5_7_45: -8848885742010721033
+      warrior_armed_walk_SWW_202.5_7_46: -3853800314749304685
+      warrior_armed_walk_SWW_202.5_7_47: 8093760224275241838
+      warrior_armed_walk_SWW_202.5_7_48: 7782910973876166576
+      warrior_armed_walk_SWW_202.5_7_49: -5317316592421304351
+      warrior_armed_walk_SWW_202.5_7_5: 1551598395606438973
+      warrior_armed_walk_SWW_202.5_7_50: 2746103219572185533
+      warrior_armed_walk_SWW_202.5_7_51: 6685985260188929303
+      warrior_armed_walk_SWW_202.5_7_52: 8249603415614531714
+      warrior_armed_walk_SWW_202.5_7_53: 3076563371645056941
+      warrior_armed_walk_SWW_202.5_7_54: -3691202465140074612
+      warrior_armed_walk_SWW_202.5_7_55: 6429305340108390211
+      warrior_armed_walk_SWW_202.5_7_56: 7377781487180300921
+      warrior_armed_walk_SWW_202.5_7_57: -5168415113765444257
+      warrior_armed_walk_SWW_202.5_7_58: 784418848276725959
+      warrior_armed_walk_SWW_202.5_7_59: -3907489087120091006
+      warrior_armed_walk_SWW_202.5_7_6: 2846625694874155284
+      warrior_armed_walk_SWW_202.5_7_60: -3393645872113653701
+      warrior_armed_walk_SWW_202.5_7_61: -8400782694677713528
+      warrior_armed_walk_SWW_202.5_7_62: 6469170122869602627
+      warrior_armed_walk_SWW_202.5_7_7: 1832639127307647771
+      warrior_armed_walk_SWW_202.5_7_8: -856974030867030136
+      warrior_armed_walk_SWW_202.5_7_9: 1079319611133338350
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

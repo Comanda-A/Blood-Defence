@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1068379843694874248}
   - component: {fileID: 5932383658840258883}
   - component: {fileID: 5776826778949678455}
-  - component: {fileID: 2589366687360821043}
   - component: {fileID: 794049287455845596}
   - component: {fileID: 7600361540224494638}
   - component: {fileID: 5369961413597968692}
@@ -23,6 +22,7 @@ GameObject:
   - component: {fileID: 4049017518120249553}
   - component: {fileID: 5292222206107714655}
   - component: {fileID: 6331378937103606099}
+  - component: {fileID: 1516417470557394498}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -186,18 +186,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.13, y: 0.21}
   m_Direction: 0
---- !u!114 &2589366687360821043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8521287489001304661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9be1067ae46dc41408689a8f6d874825, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &794049287455845596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,9 +199,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaultSpeed: 4
-  DefaultAcceleration: 25
+  DefaultAcceleration: 30
   CurrentSpeed: 4
-  CurrentAcceleration: 4
+  CurrentAcceleration: 30
 --- !u!114 &7600361540224494638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,6 +250,7 @@ MonoBehaviour:
   StepAudio2: {fileID: 0}
   AttackAudio: {fileID: 8300000, guid: 858c1438e0c1b9347abb929200a6973d, type: 3}
   ShotAudio: {fileID: 8300000, guid: 872e814ebcd5cc542beaa649329cdb5e, type: 3}
+  KickAudio: {fileID: 8300000, guid: 540d322f12cdbb64388f5876001e785c, type: 3}
   audioSource: {fileID: 0}
 --- !u!114 &3807228901860612156
 MonoBehaviour:
@@ -334,3 +323,23 @@ MonoBehaviour:
   RollCooldown: 0.2
   RollSpeed: 12
   RollDuration: 0.15
+--- !u!114 &1516417470557394498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8521287489001304661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b731d920c64fb4c82b38b1d79b7fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KickingRadius: 1.1
+  AngleKick: 150
+  KickCooldown: 0.4
+  SpeedKickTarget: 24
+  DurationKickTarget: 0.2
+  KickMask:
+    serializedVersion: 2
+    m_Bits: 128

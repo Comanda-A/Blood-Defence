@@ -6,13 +6,15 @@ namespace WayOfBlood.Shooting
 {
     public class BulletHandler : MonoBehaviour
     {
-        public event UnityAction<GameObject> OnDestroyEvent; 
-        
+        public event UnityAction<GameObject> OnDestroyEvent;
+
+        [Header("Bullet parameters")]
         public float Speed;                 // Скорость
         public int Damage;                  // Урон
 
         private new Rigidbody2D rigidbody;
         private Vector2 direction;          // Направление движения пули
+        private bool isDestroyed;
 
         public void Initialize(float speed, float lifetime, int damage, Vector2 direction)
         {
@@ -25,6 +27,7 @@ namespace WayOfBlood.Shooting
         private void Start()
         {
             rigidbody = GetComponent<Rigidbody2D>();
+            isDestroyed = false;
         }
 
         private void FixedUpdate()
@@ -43,16 +46,26 @@ namespace WayOfBlood.Shooting
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
+            if (isDestroyed) return;
+
             CharacterHealth character;
             if (collision.gameObject.TryGetComponent<CharacterHealth>(out character))
             {
                 character.TakeDamage(Damage);
             }
+
+            Destroy();
+        }
+
+        public void Destroy()
+        {
+            isDestroyed = true;
             Destroy(gameObject);
         }
 
         private void OnDestroy()
         {
+            isDestroyed = true;
             OnDestroyEvent?.Invoke(gameObject);
         }
     }

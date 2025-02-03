@@ -12,7 +12,7 @@ namespace WayOfBlood.Shooting
         [SerializeField] private GameObject bulletPrefab;   // Префаб пули
         [SerializeField] private float bulletSpeed = 10f;   // Скорость пули
         [SerializeField] private float bulletLifetime = 3f; // Время жизни пули
-        [SerializeField] private int bulletDamage = 10;     // Урон пули
+        [SerializeField] private int bulletDamage = 1;     // Урон пули
 
         private Camera mainCamera;
         private List<GameObject> bullets;

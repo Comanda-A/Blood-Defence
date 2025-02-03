@@ -1,24 +1,24 @@
-using UnityEngine;
-using WayOfBlood.Input;
+using UnityEngine.InputSystem;
 
 namespace WayOfBlood.Character.Player
 {
     public class PlayerRoll : CharacterRoll
     {
-        private InputBase playerInputSystem;
+        private InputAction rollAction;
 
         protected override void Start()
         {
             base.Start();
-            playerInputSystem = GetComponent<InputBase>();
+            rollAction = InputSystem.actions.FindAction("Roll");
+            rollAction.performed += RollHandler;
         }
 
-        private void Update()
+        private void RollHandler(InputAction.CallbackContext context) => Roll();
+
+        protected override void OnDestroy()
         {
-            if (playerInputSystem.RollKeyPressed)
-            {
-                Roll();
-            }
+            base.OnDestroy();
+            rollAction.performed -= RollHandler;
         }
     }
 }

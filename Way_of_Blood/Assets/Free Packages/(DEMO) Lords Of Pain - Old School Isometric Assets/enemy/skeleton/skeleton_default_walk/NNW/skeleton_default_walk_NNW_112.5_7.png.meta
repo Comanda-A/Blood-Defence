@@ -635,7 +635,27 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skeleton_default_walk_NNW_112.5_7_0: -3622044236376674969
+      skeleton_default_walk_NNW_112.5_7_1: 7715597435513004741
+      skeleton_default_walk_NNW_112.5_7_10: -6570961263326391113
+      skeleton_default_walk_NNW_112.5_7_11: 8601106413928672606
+      skeleton_default_walk_NNW_112.5_7_12: 8414481143843143686
+      skeleton_default_walk_NNW_112.5_7_13: -5383727172602301968
+      skeleton_default_walk_NNW_112.5_7_14: 3283693846743693133
+      skeleton_default_walk_NNW_112.5_7_15: 4869933303343645352
+      skeleton_default_walk_NNW_112.5_7_16: 3016954341948380652
+      skeleton_default_walk_NNW_112.5_7_17: -8151248617768950155
+      skeleton_default_walk_NNW_112.5_7_18: 3051250424781127360
+      skeleton_default_walk_NNW_112.5_7_19: -6635549949091667293
+      skeleton_default_walk_NNW_112.5_7_2: -3250184679023545851
+      skeleton_default_walk_NNW_112.5_7_3: -3013034150147110699
+      skeleton_default_walk_NNW_112.5_7_4: -3611156433902427254
+      skeleton_default_walk_NNW_112.5_7_5: 5763963232192943580
+      skeleton_default_walk_NNW_112.5_7_6: -2775732775116756845
+      skeleton_default_walk_NNW_112.5_7_7: -6738236925116242036
+      skeleton_default_walk_NNW_112.5_7_8: -4580216544054154313
+      skeleton_default_walk_NNW_112.5_7_9: -5061679177509924333
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,6 +1,5 @@
 using UnityEngine;
-using UnityEngine.XR;
-using WayOfBlood.Input;
+using UnityEngine.InputSystem;
 
 namespace WayOfBlood.Character.Player
 {
@@ -10,20 +9,20 @@ namespace WayOfBlood.Character.Player
         public int BloodlustBonusOnKill = 1;
 
         private PlayerBloodlust playerBloodlust;
-        private InputBase playerInputSystem;
+        private InputAction attackAction;
 
         protected override void Start()
         {
             base.Start();
             playerBloodlust = GetComponent<PlayerBloodlust>();
-            playerInputSystem = GetComponent<InputBase>();
+            attackAction = InputSystem.actions.FindAction("Attack");
+            attackAction.performed += AttackHandler;
             OnDamage += DamageHandler;
         }
 
-        private void Update()
+        private void AttackHandler(InputAction.CallbackContext context)
         {
-            if (playerInputSystem.AttackKeyPressed)
-                Attack();
+            Attack();
         }
 
         private void DamageHandler(CharacterHealth characterHealth)
@@ -34,6 +33,7 @@ namespace WayOfBlood.Character.Player
         protected override void OnDestroy()
         {
             base.OnDestroy();
+            attackAction.performed -= AttackHandler;
             OnDamage -= DamageHandler;
         }
     }

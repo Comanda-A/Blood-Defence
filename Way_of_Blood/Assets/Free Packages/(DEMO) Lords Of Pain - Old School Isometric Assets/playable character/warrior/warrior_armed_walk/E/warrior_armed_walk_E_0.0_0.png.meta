@@ -1810,7 +1810,74 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      warrior_armed_walk_E_0.0_0_0: -2276969109406799312
+      warrior_armed_walk_E_0.0_0_1: 2899594616111959414
+      warrior_armed_walk_E_0.0_0_10: -8837687891835421156
+      warrior_armed_walk_E_0.0_0_11: 5655833061948668123
+      warrior_armed_walk_E_0.0_0_12: -4444126606630354218
+      warrior_armed_walk_E_0.0_0_13: 801288388687505291
+      warrior_armed_walk_E_0.0_0_14: -2076539025856029701
+      warrior_armed_walk_E_0.0_0_15: 5208930987410210580
+      warrior_armed_walk_E_0.0_0_16: 265426414802765539
+      warrior_armed_walk_E_0.0_0_17: 8943651375068137035
+      warrior_armed_walk_E_0.0_0_18: 1133079462082368316
+      warrior_armed_walk_E_0.0_0_19: 2451551928564140063
+      warrior_armed_walk_E_0.0_0_2: 8570544859719070134
+      warrior_armed_walk_E_0.0_0_20: 5872592567211139647
+      warrior_armed_walk_E_0.0_0_21: 3562243388084113519
+      warrior_armed_walk_E_0.0_0_22: -7572981370591903770
+      warrior_armed_walk_E_0.0_0_23: -3194462343545996711
+      warrior_armed_walk_E_0.0_0_24: 5736099344190964503
+      warrior_armed_walk_E_0.0_0_25: 1179498304822230791
+      warrior_armed_walk_E_0.0_0_26: -8002977870702770426
+      warrior_armed_walk_E_0.0_0_27: 3476105497675431142
+      warrior_armed_walk_E_0.0_0_28: -4481365141089077988
+      warrior_armed_walk_E_0.0_0_29: -2621797420285906607
+      warrior_armed_walk_E_0.0_0_3: -4980039442655378469
+      warrior_armed_walk_E_0.0_0_30: 3242846265026600803
+      warrior_armed_walk_E_0.0_0_31: 5043449234483681848
+      warrior_armed_walk_E_0.0_0_32: -6485027473741060347
+      warrior_armed_walk_E_0.0_0_33: -7943689918741716856
+      warrior_armed_walk_E_0.0_0_34: 3082523838766999269
+      warrior_armed_walk_E_0.0_0_35: 6510298634601864419
+      warrior_armed_walk_E_0.0_0_36: -6422075568673950609
+      warrior_armed_walk_E_0.0_0_37: -7524109164487100877
+      warrior_armed_walk_E_0.0_0_38: 8488526170768214477
+      warrior_armed_walk_E_0.0_0_39: 2518661522548581883
+      warrior_armed_walk_E_0.0_0_4: 8463485992717071560
+      warrior_armed_walk_E_0.0_0_40: 8308115879765836361
+      warrior_armed_walk_E_0.0_0_41: 6854791822729287469
+      warrior_armed_walk_E_0.0_0_42: 4089802255176563573
+      warrior_armed_walk_E_0.0_0_43: 2736205725358933530
+      warrior_armed_walk_E_0.0_0_44: 4096990393655995463
+      warrior_armed_walk_E_0.0_0_45: -6986847090915570826
+      warrior_armed_walk_E_0.0_0_46: -3324417119631819481
+      warrior_armed_walk_E_0.0_0_47: 2742476607234068455
+      warrior_armed_walk_E_0.0_0_48: 8154452540826472507
+      warrior_armed_walk_E_0.0_0_49: 2308834157355621864
+      warrior_armed_walk_E_0.0_0_5: -7171209367169413453
+      warrior_armed_walk_E_0.0_0_50: 3129002911402082988
+      warrior_armed_walk_E_0.0_0_51: 6471944262065924432
+      warrior_armed_walk_E_0.0_0_52: 6214257758584596331
+      warrior_armed_walk_E_0.0_0_53: 8807484242883451319
+      warrior_armed_walk_E_0.0_0_54: 7954936761144580992
+      warrior_armed_walk_E_0.0_0_55: -352977994128152602
+      warrior_armed_walk_E_0.0_0_56: 4222936380893896504
+      warrior_armed_walk_E_0.0_0_57: -6953603334530755513
+      warrior_armed_walk_E_0.0_0_58: 3005443956771626731
+      warrior_armed_walk_E_0.0_0_59: 1880034336096362375
+      warrior_armed_walk_E_0.0_0_6: 535036694953898028
+      warrior_armed_walk_E_0.0_0_60: 7417522435322946995
+      warrior_armed_walk_E_0.0_0_61: 6560402804342971408
+      warrior_armed_walk_E_0.0_0_62: -1531375384503617769
+      warrior_armed_walk_E_0.0_0_63: -3601496172098430759
+      warrior_armed_walk_E_0.0_0_64: 7822593399911326098
+      warrior_armed_walk_E_0.0_0_65: -5014823136074642863
+      warrior_armed_walk_E_0.0_0_66: -5492181499914418213
+      warrior_armed_walk_E_0.0_0_7: -1275488827418372802
+      warrior_armed_walk_E_0.0_0_8: 7956323707558868521
+      warrior_armed_walk_E_0.0_0_9: 3903168714333962052
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

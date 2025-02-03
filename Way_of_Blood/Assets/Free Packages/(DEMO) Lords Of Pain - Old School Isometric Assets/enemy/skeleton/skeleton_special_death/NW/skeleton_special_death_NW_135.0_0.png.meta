@@ -910,7 +910,38 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skeleton_special_death_NW_135.0_0_0: -1942127635908373390
+      skeleton_special_death_NW_135.0_0_1: 3947940848377247736
+      skeleton_special_death_NW_135.0_0_10: 5130643169777418755
+      skeleton_special_death_NW_135.0_0_11: 3923306210255379724
+      skeleton_special_death_NW_135.0_0_12: 3006691932381640664
+      skeleton_special_death_NW_135.0_0_13: -2248590604595282962
+      skeleton_special_death_NW_135.0_0_14: -4904819605386126201
+      skeleton_special_death_NW_135.0_0_15: 548181748238412036
+      skeleton_special_death_NW_135.0_0_16: 3009881314020798771
+      skeleton_special_death_NW_135.0_0_17: 7725978699623639373
+      skeleton_special_death_NW_135.0_0_18: 6092517349662890477
+      skeleton_special_death_NW_135.0_0_19: 5695655449591443570
+      skeleton_special_death_NW_135.0_0_2: -959254203519884424
+      skeleton_special_death_NW_135.0_0_20: -329492666417424351
+      skeleton_special_death_NW_135.0_0_21: -7520327650608941331
+      skeleton_special_death_NW_135.0_0_22: -7570462401620619861
+      skeleton_special_death_NW_135.0_0_23: -2285497227531780759
+      skeleton_special_death_NW_135.0_0_24: -5816310835465360199
+      skeleton_special_death_NW_135.0_0_25: 5549471439126267391
+      skeleton_special_death_NW_135.0_0_26: 6758727093705851945
+      skeleton_special_death_NW_135.0_0_27: 3313377556207585345
+      skeleton_special_death_NW_135.0_0_28: -8790115959140577330
+      skeleton_special_death_NW_135.0_0_29: -4937227498908255903
+      skeleton_special_death_NW_135.0_0_3: -354007250221675008
+      skeleton_special_death_NW_135.0_0_30: 732079677295697908
+      skeleton_special_death_NW_135.0_0_4: -2031650414612298604
+      skeleton_special_death_NW_135.0_0_5: -5425609925926170277
+      skeleton_special_death_NW_135.0_0_6: -5157317578233303273
+      skeleton_special_death_NW_135.0_0_7: -1661082062041281005
+      skeleton_special_death_NW_135.0_0_8: 4329784124684015835
+      skeleton_special_death_NW_135.0_0_9: -1531072464638157129
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

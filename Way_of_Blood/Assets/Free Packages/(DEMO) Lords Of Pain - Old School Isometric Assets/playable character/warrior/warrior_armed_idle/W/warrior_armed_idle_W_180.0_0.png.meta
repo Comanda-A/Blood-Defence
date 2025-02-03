@@ -1760,7 +1760,72 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      warrior_armed_idle_W_180.0_0_0: 7157650742065524239
+      warrior_armed_idle_W_180.0_0_1: 3742803228232703980
+      warrior_armed_idle_W_180.0_0_10: -3185347558632008518
+      warrior_armed_idle_W_180.0_0_11: -136797282099738538
+      warrior_armed_idle_W_180.0_0_12: -4386732778827389568
+      warrior_armed_idle_W_180.0_0_13: 1333421759724321578
+      warrior_armed_idle_W_180.0_0_14: -8646418863178664144
+      warrior_armed_idle_W_180.0_0_15: -9137730969077113591
+      warrior_armed_idle_W_180.0_0_16: 8935936021197827349
+      warrior_armed_idle_W_180.0_0_17: 4005938061811892628
+      warrior_armed_idle_W_180.0_0_18: -1890808053590207361
+      warrior_armed_idle_W_180.0_0_19: 8739555385179366686
+      warrior_armed_idle_W_180.0_0_2: 4746804515907289424
+      warrior_armed_idle_W_180.0_0_20: -4034235022271716535
+      warrior_armed_idle_W_180.0_0_21: 3881556673504436633
+      warrior_armed_idle_W_180.0_0_22: 3014640017234961386
+      warrior_armed_idle_W_180.0_0_23: -2743021099827036541
+      warrior_armed_idle_W_180.0_0_24: 1606943999038509865
+      warrior_armed_idle_W_180.0_0_25: -3741359245331474529
+      warrior_armed_idle_W_180.0_0_26: 6199894779826082122
+      warrior_armed_idle_W_180.0_0_27: -8147142493353861619
+      warrior_armed_idle_W_180.0_0_28: 8993267676509873802
+      warrior_armed_idle_W_180.0_0_29: -4820865864302086834
+      warrior_armed_idle_W_180.0_0_3: 7500016152315860707
+      warrior_armed_idle_W_180.0_0_30: 4943247162366679799
+      warrior_armed_idle_W_180.0_0_31: -2695963239344386562
+      warrior_armed_idle_W_180.0_0_32: 7704784943628544837
+      warrior_armed_idle_W_180.0_0_33: 5469048978434534373
+      warrior_armed_idle_W_180.0_0_34: -8220759180577866291
+      warrior_armed_idle_W_180.0_0_35: 5295083228245752113
+      warrior_armed_idle_W_180.0_0_36: 2604183357335163827
+      warrior_armed_idle_W_180.0_0_37: 1702580652328818378
+      warrior_armed_idle_W_180.0_0_38: -7427276209097269533
+      warrior_armed_idle_W_180.0_0_39: 1802349364729213957
+      warrior_armed_idle_W_180.0_0_4: 139810087486239254
+      warrior_armed_idle_W_180.0_0_40: -5736191450862011395
+      warrior_armed_idle_W_180.0_0_41: 6707804144056865497
+      warrior_armed_idle_W_180.0_0_42: -470047436267610382
+      warrior_armed_idle_W_180.0_0_43: 163988013061276755
+      warrior_armed_idle_W_180.0_0_44: -8415346311307033728
+      warrior_armed_idle_W_180.0_0_45: -5764228737727651095
+      warrior_armed_idle_W_180.0_0_46: 5528261020893638662
+      warrior_armed_idle_W_180.0_0_47: 6340183208122822474
+      warrior_armed_idle_W_180.0_0_48: 8872080448716616566
+      warrior_armed_idle_W_180.0_0_49: 2746144440610535275
+      warrior_armed_idle_W_180.0_0_5: -5030849474117926309
+      warrior_armed_idle_W_180.0_0_50: 4450762282133666500
+      warrior_armed_idle_W_180.0_0_51: 4313471246815468954
+      warrior_armed_idle_W_180.0_0_52: 9219930062751638253
+      warrior_armed_idle_W_180.0_0_53: -9165857983973839250
+      warrior_armed_idle_W_180.0_0_54: -1144309843918289206
+      warrior_armed_idle_W_180.0_0_55: -5952112863368323421
+      warrior_armed_idle_W_180.0_0_56: 227286498455519584
+      warrior_armed_idle_W_180.0_0_57: -8762758102715529733
+      warrior_armed_idle_W_180.0_0_58: -8145354604171212247
+      warrior_armed_idle_W_180.0_0_59: 5262482663103842960
+      warrior_armed_idle_W_180.0_0_6: -6068139145317023487
+      warrior_armed_idle_W_180.0_0_60: -5190380512288264056
+      warrior_armed_idle_W_180.0_0_61: 5799270429795547222
+      warrior_armed_idle_W_180.0_0_62: -8588931258562948155
+      warrior_armed_idle_W_180.0_0_63: -8649084724774564704
+      warrior_armed_idle_W_180.0_0_64: -5013145317834066092
+      warrior_armed_idle_W_180.0_0_7: -8922882529722376441
+      warrior_armed_idle_W_180.0_0_8: 7676536308263377112
+      warrior_armed_idle_W_180.0_0_9: -3949571829301989407
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

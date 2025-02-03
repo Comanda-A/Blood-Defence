@@ -885,7 +885,37 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skeleton_default_walk_N_90.0_7_0: -8178635151901732481
+      skeleton_default_walk_N_90.0_7_1: 4792677445863277607
+      skeleton_default_walk_N_90.0_7_10: 5745820615788449695
+      skeleton_default_walk_N_90.0_7_11: -7640475565030088816
+      skeleton_default_walk_N_90.0_7_12: -2050236558746152963
+      skeleton_default_walk_N_90.0_7_13: -8009674831461805594
+      skeleton_default_walk_N_90.0_7_14: 4043363218275477750
+      skeleton_default_walk_N_90.0_7_15: 5142286245777433580
+      skeleton_default_walk_N_90.0_7_16: 6490677173126021292
+      skeleton_default_walk_N_90.0_7_17: 3366857097300477086
+      skeleton_default_walk_N_90.0_7_18: 9153564893218462749
+      skeleton_default_walk_N_90.0_7_19: -6695975225372317409
+      skeleton_default_walk_N_90.0_7_2: 9073616970312373754
+      skeleton_default_walk_N_90.0_7_20: 8261097127765977617
+      skeleton_default_walk_N_90.0_7_21: -6253865173750326651
+      skeleton_default_walk_N_90.0_7_22: -5300865976141617909
+      skeleton_default_walk_N_90.0_7_23: -4360848610778556668
+      skeleton_default_walk_N_90.0_7_24: 4392202073831218062
+      skeleton_default_walk_N_90.0_7_25: 389272822939988168
+      skeleton_default_walk_N_90.0_7_26: 6459937001165712294
+      skeleton_default_walk_N_90.0_7_27: -622074843161119419
+      skeleton_default_walk_N_90.0_7_28: 5088419237648341659
+      skeleton_default_walk_N_90.0_7_29: -6346811399361183272
+      skeleton_default_walk_N_90.0_7_3: 1071809486928038418
+      skeleton_default_walk_N_90.0_7_4: -725491427345374806
+      skeleton_default_walk_N_90.0_7_5: 5985181608138847731
+      skeleton_default_walk_N_90.0_7_6: 5368574675947711810
+      skeleton_default_walk_N_90.0_7_7: 1097408651877709715
+      skeleton_default_walk_N_90.0_7_8: -372862662026919896
+      skeleton_default_walk_N_90.0_7_9: 7980203402904667685
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

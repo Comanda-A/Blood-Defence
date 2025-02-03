@@ -2010,7 +2010,82 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      warrior_armed_walk_SE_315.0_3_0: 6732188845643734076
+      warrior_armed_walk_SE_315.0_3_1: -105947414673077218
+      warrior_armed_walk_SE_315.0_3_10: -645697350659909445
+      warrior_armed_walk_SE_315.0_3_11: 4503271497060778257
+      warrior_armed_walk_SE_315.0_3_12: -3183835116213212555
+      warrior_armed_walk_SE_315.0_3_13: -8598085015368124528
+      warrior_armed_walk_SE_315.0_3_14: 1126733658708059580
+      warrior_armed_walk_SE_315.0_3_15: 894739983207311111
+      warrior_armed_walk_SE_315.0_3_16: 1888871302580130316
+      warrior_armed_walk_SE_315.0_3_17: 5703876308603152540
+      warrior_armed_walk_SE_315.0_3_18: 7428351770770068477
+      warrior_armed_walk_SE_315.0_3_19: 3170517721649686605
+      warrior_armed_walk_SE_315.0_3_2: -4191056410589111983
+      warrior_armed_walk_SE_315.0_3_20: -1019838274630849785
+      warrior_armed_walk_SE_315.0_3_21: 6904459296912143247
+      warrior_armed_walk_SE_315.0_3_22: -3162399469000923057
+      warrior_armed_walk_SE_315.0_3_23: -4135668722170139739
+      warrior_armed_walk_SE_315.0_3_24: -6563995792905174368
+      warrior_armed_walk_SE_315.0_3_25: -2618771054790428468
+      warrior_armed_walk_SE_315.0_3_26: 7843181373660013156
+      warrior_armed_walk_SE_315.0_3_27: 8311909903225866911
+      warrior_armed_walk_SE_315.0_3_28: 5395699593552779038
+      warrior_armed_walk_SE_315.0_3_29: -8282665879200313692
+      warrior_armed_walk_SE_315.0_3_3: 7399425709101362884
+      warrior_armed_walk_SE_315.0_3_30: 6618123723954957517
+      warrior_armed_walk_SE_315.0_3_31: -8748716950394031266
+      warrior_armed_walk_SE_315.0_3_32: -7293571891449658652
+      warrior_armed_walk_SE_315.0_3_33: -3355566651910921734
+      warrior_armed_walk_SE_315.0_3_34: -6037535810334836921
+      warrior_armed_walk_SE_315.0_3_35: -556317217958545740
+      warrior_armed_walk_SE_315.0_3_36: -1248337466130129950
+      warrior_armed_walk_SE_315.0_3_37: 2804249256703958874
+      warrior_armed_walk_SE_315.0_3_38: -2821327837518746786
+      warrior_armed_walk_SE_315.0_3_39: 6974678052889167499
+      warrior_armed_walk_SE_315.0_3_4: -4157980729300695274
+      warrior_armed_walk_SE_315.0_3_40: -7203456404753650833
+      warrior_armed_walk_SE_315.0_3_41: 835577648851678104
+      warrior_armed_walk_SE_315.0_3_42: 3139844054026154765
+      warrior_armed_walk_SE_315.0_3_43: -2779816469986302564
+      warrior_armed_walk_SE_315.0_3_44: 8273294754235492253
+      warrior_armed_walk_SE_315.0_3_45: -7456219422091406761
+      warrior_armed_walk_SE_315.0_3_46: 3793791567557857177
+      warrior_armed_walk_SE_315.0_3_47: -2689358311522992708
+      warrior_armed_walk_SE_315.0_3_48: -3841915442246382607
+      warrior_armed_walk_SE_315.0_3_49: -5350561945198045422
+      warrior_armed_walk_SE_315.0_3_5: 4695776277798149883
+      warrior_armed_walk_SE_315.0_3_50: -6579097871583010755
+      warrior_armed_walk_SE_315.0_3_51: 3730477960437235641
+      warrior_armed_walk_SE_315.0_3_52: 7676214641691809354
+      warrior_armed_walk_SE_315.0_3_53: -715001917291453733
+      warrior_armed_walk_SE_315.0_3_54: 5692534750543789321
+      warrior_armed_walk_SE_315.0_3_55: 5708263250339548059
+      warrior_armed_walk_SE_315.0_3_56: 9033323700699497083
+      warrior_armed_walk_SE_315.0_3_57: -3336604682974869051
+      warrior_armed_walk_SE_315.0_3_58: 7237624592958061360
+      warrior_armed_walk_SE_315.0_3_59: 8173770706904588636
+      warrior_armed_walk_SE_315.0_3_6: 7881030353644626577
+      warrior_armed_walk_SE_315.0_3_60: 3761656466448576624
+      warrior_armed_walk_SE_315.0_3_61: -2309385483967790863
+      warrior_armed_walk_SE_315.0_3_62: -5719476285605035171
+      warrior_armed_walk_SE_315.0_3_63: 6242667012929983757
+      warrior_armed_walk_SE_315.0_3_64: -3665951655426714237
+      warrior_armed_walk_SE_315.0_3_65: -2109148486614259672
+      warrior_armed_walk_SE_315.0_3_66: 1905390324322642422
+      warrior_armed_walk_SE_315.0_3_67: -4219397602665848835
+      warrior_armed_walk_SE_315.0_3_68: -2264065754646777882
+      warrior_armed_walk_SE_315.0_3_69: -4405908467501520127
+      warrior_armed_walk_SE_315.0_3_7: -3685480523739683272
+      warrior_armed_walk_SE_315.0_3_70: -4258230648817966499
+      warrior_armed_walk_SE_315.0_3_71: 276201541086590804
+      warrior_armed_walk_SE_315.0_3_72: -2841911680908689865
+      warrior_armed_walk_SE_315.0_3_73: -5613061125987193122
+      warrior_armed_walk_SE_315.0_3_74: -673276376928495116
+      warrior_armed_walk_SE_315.0_3_8: -4206036038527078376
+      warrior_armed_walk_SE_315.0_3_9: -1172630146291459471
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

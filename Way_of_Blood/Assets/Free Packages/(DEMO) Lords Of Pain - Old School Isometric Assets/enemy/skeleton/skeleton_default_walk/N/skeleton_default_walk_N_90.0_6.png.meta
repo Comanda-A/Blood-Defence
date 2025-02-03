@@ -935,7 +935,39 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skeleton_default_walk_N_90.0_6_0: 8475823029293394453
+      skeleton_default_walk_N_90.0_6_1: 3091907443827652075
+      skeleton_default_walk_N_90.0_6_10: 878049349689496605
+      skeleton_default_walk_N_90.0_6_11: 8740081409514550477
+      skeleton_default_walk_N_90.0_6_12: -5582489044932877173
+      skeleton_default_walk_N_90.0_6_13: 6327140736826523223
+      skeleton_default_walk_N_90.0_6_14: 6182917525300680842
+      skeleton_default_walk_N_90.0_6_15: 301369250031431266
+      skeleton_default_walk_N_90.0_6_16: 1384732459463520865
+      skeleton_default_walk_N_90.0_6_17: 4049325073368171877
+      skeleton_default_walk_N_90.0_6_18: 6791996782905408311
+      skeleton_default_walk_N_90.0_6_19: -3210082064137773345
+      skeleton_default_walk_N_90.0_6_2: -5159326327443754504
+      skeleton_default_walk_N_90.0_6_20: 5384997528407717736
+      skeleton_default_walk_N_90.0_6_21: -676465787370969994
+      skeleton_default_walk_N_90.0_6_22: 5767176589829989102
+      skeleton_default_walk_N_90.0_6_23: -2507972934604543523
+      skeleton_default_walk_N_90.0_6_24: -3848649528100141395
+      skeleton_default_walk_N_90.0_6_25: -5185236185853488232
+      skeleton_default_walk_N_90.0_6_26: 6062985905372258006
+      skeleton_default_walk_N_90.0_6_27: 3323584150930735223
+      skeleton_default_walk_N_90.0_6_28: -5604827202218374422
+      skeleton_default_walk_N_90.0_6_29: -3597997530357513078
+      skeleton_default_walk_N_90.0_6_3: -2551131704006432222
+      skeleton_default_walk_N_90.0_6_30: -8239434413153145920
+      skeleton_default_walk_N_90.0_6_31: -8006887473542127421
+      skeleton_default_walk_N_90.0_6_4: 6655926963382542901
+      skeleton_default_walk_N_90.0_6_5: 2702515678532340091
+      skeleton_default_walk_N_90.0_6_6: 7226990469923710647
+      skeleton_default_walk_N_90.0_6_7: 236082152329814381
+      skeleton_default_walk_N_90.0_6_8: 2870609507752647471
+      skeleton_default_walk_N_90.0_6_9: 4597798320950693105
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,7 +1,4 @@
 using UnityEngine;
-using UnityEngine.Events;
-using WayOfBlood.Input;
-using WayOfBlood.Shooting;
 
 namespace WayOfBlood.Character.Enemy
 {

@@ -1,7 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
-using WayOfBlood.Input;
 
 namespace WayOfBlood.Character.Enemy
 {

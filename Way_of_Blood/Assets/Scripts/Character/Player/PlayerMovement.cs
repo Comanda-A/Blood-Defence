@@ -1,38 +1,33 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Events;
-using WayOfBlood.Input;
 
 namespace WayOfBlood.Character.Player
 {
     public class PlayerMovement : CharacterMovement
     {
-        private InputBase playerInputSystem;
+        private InputAction moveAction;
 
         protected override void Start()
         {
             base.Start();
-            playerInputSystem = GetComponent<InputBase>();
+            moveAction = InputSystem.actions.FindAction("Move");
         }
 
         protected void Update()
         {
-            MoveDirection = playerInputSystem.MoveDirection;
+            MoveDirection = moveAction.ReadValue<Vector2>();
 
-            if (MoveDirection != Vector2.zero)
+            if (MoveDirection != Vector2.zero && Mathf.Abs(MoveDirection.x) != Mathf.Abs(MoveDirection.y))
             {
-                // ѕровер€ем, совпадает ли текущее направление взгл€да с направлением движени€
-                bool isSameDirection =
-                    (ViewDirection == Vector2.up && MoveDirection.y > 0) ||
-                    (ViewDirection == Vector2.down && MoveDirection.y < 0) ||
-                    (ViewDirection == Vector2.right && MoveDirection.x > 0) ||
-                    (ViewDirection == Vector2.left && MoveDirection.x < 0);
-
-                if (!isSameDirection)
+                // ќпредел€ем новое направление взгл€да
+                if (Mathf.Abs(MoveDirection.x) >= Mathf.Abs(MoveDirection.y))
                 {
-                    // ќбновл€ем направление взгл€да
-                    ViewDirection = MoveDirection.x != 0
-                        ? (MoveDirection.x > 0 ? Vector2.right : Vector2.left)
-                        : (MoveDirection.y > 0 ? Vector2.up : Vector2.down);
+                    ViewDirection = MoveDirection.x > 0 ? Vector2.right : Vector2.left;
+                }
+                else
+                {
+                    ViewDirection = MoveDirection.y > 0 ? Vector2.up : Vector2.down;
                 }
             }
         }

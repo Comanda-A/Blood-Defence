@@ -34,17 +34,14 @@ namespace WayOfBlood.Character
 
         protected virtual void ProcessRoll()
         {
-            StartCoroutine(RollAction());
-        }
-
-        private IEnumerator RollAction()
-        {
-            characterMovement.CloseChangeDirections();
-            characterMovement.CurrentSpeed = RollSpeed;
-            yield return new WaitForSeconds(RollDuration);
-            characterMovement.OpenChangeDirections();
-            characterMovement.SetDefaultParameters();
-            yield return null;
+            characterMovement.SetConstantDirection(
+                characterMovement.MoveDirection,
+                characterMovement.ViewDirection,
+                RollDuration,
+                RollSpeed,
+                characterMovement.CurrentAcceleration,
+                true
+            );
         }
 
         protected virtual void OnDestroy()

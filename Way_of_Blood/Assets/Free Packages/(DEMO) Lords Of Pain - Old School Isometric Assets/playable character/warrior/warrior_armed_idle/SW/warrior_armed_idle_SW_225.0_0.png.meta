@@ -1535,7 +1535,63 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      warrior_armed_idle_SW_225.0_0_0: -1316489428513738118
+      warrior_armed_idle_SW_225.0_0_1: -6837290241191529401
+      warrior_armed_idle_SW_225.0_0_10: 6627348585182076316
+      warrior_armed_idle_SW_225.0_0_11: -2017746064803248832
+      warrior_armed_idle_SW_225.0_0_12: 4578548427000010577
+      warrior_armed_idle_SW_225.0_0_13: 4973952984750942095
+      warrior_armed_idle_SW_225.0_0_14: -3336380715331704246
+      warrior_armed_idle_SW_225.0_0_15: 6100471203599829696
+      warrior_armed_idle_SW_225.0_0_16: -4860574823090993347
+      warrior_armed_idle_SW_225.0_0_17: 6326856054578569434
+      warrior_armed_idle_SW_225.0_0_18: -7317548935004233206
+      warrior_armed_idle_SW_225.0_0_19: -1633430236122648997
+      warrior_armed_idle_SW_225.0_0_2: -930436911473323434
+      warrior_armed_idle_SW_225.0_0_20: -3876776189886851142
+      warrior_armed_idle_SW_225.0_0_21: -1475618823693781097
+      warrior_armed_idle_SW_225.0_0_22: -6029762817383506917
+      warrior_armed_idle_SW_225.0_0_23: 7599522820431386529
+      warrior_armed_idle_SW_225.0_0_24: -4836263066665136656
+      warrior_armed_idle_SW_225.0_0_25: -7234005720050607306
+      warrior_armed_idle_SW_225.0_0_26: 5758901633376223280
+      warrior_armed_idle_SW_225.0_0_27: 193848186210988149
+      warrior_armed_idle_SW_225.0_0_28: 901680629528745159
+      warrior_armed_idle_SW_225.0_0_29: -752314644229214809
+      warrior_armed_idle_SW_225.0_0_3: -3262356314055528869
+      warrior_armed_idle_SW_225.0_0_30: -8569604659063097137
+      warrior_armed_idle_SW_225.0_0_31: 6462425629808818050
+      warrior_armed_idle_SW_225.0_0_32: 8335562453892992343
+      warrior_armed_idle_SW_225.0_0_33: 4612165247105989823
+      warrior_armed_idle_SW_225.0_0_34: 7429225523891593935
+      warrior_armed_idle_SW_225.0_0_35: 7343302818531612537
+      warrior_armed_idle_SW_225.0_0_36: 7999226228306177328
+      warrior_armed_idle_SW_225.0_0_37: -1758122246532645580
+      warrior_armed_idle_SW_225.0_0_38: 8363364209214059496
+      warrior_armed_idle_SW_225.0_0_39: -7028760551720921628
+      warrior_armed_idle_SW_225.0_0_4: -5335581523199828546
+      warrior_armed_idle_SW_225.0_0_40: -4511114956082526634
+      warrior_armed_idle_SW_225.0_0_41: -2810768167279598092
+      warrior_armed_idle_SW_225.0_0_42: 6374435492098950299
+      warrior_armed_idle_SW_225.0_0_43: 6710563561120105215
+      warrior_armed_idle_SW_225.0_0_44: 8133774927198540580
+      warrior_armed_idle_SW_225.0_0_45: -6270480685695575862
+      warrior_armed_idle_SW_225.0_0_46: -6507525943942242053
+      warrior_armed_idle_SW_225.0_0_47: 4111283862401215341
+      warrior_armed_idle_SW_225.0_0_48: 7389289822087178183
+      warrior_armed_idle_SW_225.0_0_49: -6370250525141154306
+      warrior_armed_idle_SW_225.0_0_5: 1381344382508165175
+      warrior_armed_idle_SW_225.0_0_50: -5817945030057150277
+      warrior_armed_idle_SW_225.0_0_51: -6562818470835523286
+      warrior_armed_idle_SW_225.0_0_52: 3020233516475939145
+      warrior_armed_idle_SW_225.0_0_53: -3645021315568982825
+      warrior_armed_idle_SW_225.0_0_54: 8468445071194801287
+      warrior_armed_idle_SW_225.0_0_55: -661319895601405569
+      warrior_armed_idle_SW_225.0_0_6: -2969698219481452414
+      warrior_armed_idle_SW_225.0_0_7: 2571464621923634902
+      warrior_armed_idle_SW_225.0_0_8: 2911906690241439605
+      warrior_armed_idle_SW_225.0_0_9: 4710449329161130241
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

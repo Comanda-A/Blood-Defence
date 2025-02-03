@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1068379843694874248}
   - component: {fileID: 5932383658840258883}
   - component: {fileID: 1069801098907868226}
-  - component: {fileID: 8029492976296446398}
   - component: {fileID: 7455724590274615024}
   - component: {fileID: 7732202288414718264}
   - component: {fileID: 2850240672608608210}
@@ -21,8 +20,9 @@ GameObject:
   - component: {fileID: 5547033535831832225}
   - component: {fileID: 6695670710044120715}
   - component: {fileID: 6978018012999396154}
+  - component: {fileID: 1236810156428822659}
   m_Layer: 7
-  m_Name: Enemy
+  m_Name: ShooterEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -184,25 +184,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.13, y: 0.21}
   m_Direction: 0
---- !u!114 &8029492976296446398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8521287489001304661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a62ca136911bc694eba9835ecaa54275, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AttackRange: 1
-  ShootRange: 5
-  RollCooldown: 2
-  BulletEvadeDistance: 2
-  BulletMask:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!114 &7455724590274615024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,6 +261,7 @@ MonoBehaviour:
   StepAudio2: {fileID: 0}
   AttackAudio: {fileID: 8300000, guid: 858c1438e0c1b9347abb929200a6973d, type: 3}
   ShotAudio: {fileID: 8300000, guid: 872e814ebcd5cc542beaa649329cdb5e, type: 3}
+  KickAudio: {fileID: 0}
   audioSource: {fileID: 0}
 --- !u!114 &6695670710044120715
 MonoBehaviour:
@@ -310,3 +292,24 @@ MonoBehaviour:
   RollCooldown: 1
   RollSpeed: 12
   RollDuration: 0.15
+--- !u!114 &1236810156428822659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8521287489001304661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a32627acf9c9ba4b8d8d6e2bea51d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RollCooldown: 2
+  BulletEvadeDistance: 1.5
+  BulletMask:
+    serializedVersion: 2
+    m_Bits: 256
+  ShootRange: 5
+  SafeDistance: 3
+  CircleSpeed: 2
+  audioClip: {fileID: 8300000, guid: d86514c578cbcdb4981573b3f3eeebaf, type: 3}
