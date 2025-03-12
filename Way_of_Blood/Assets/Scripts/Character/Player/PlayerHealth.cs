@@ -5,25 +5,33 @@ namespace WayOfBlood.Character.Player
 {
     public class PlayerHealth : CharacterHealth
     {
-        [Header("Regeneration")]
-        public float RegenerationTime; // Время регенерации 1 hp
-        public int CostBloodlust;      // Затраты жажды крови на 1 hp
+        [Header("Shields parameters")]
+        public float    ShieldsCount;   // Количество щитов
+        public int      ShieldCost;     // Стоимость щита в единицах крови
 
-        private CharacterBloodlust characterBloodlust;
-        private Coroutine regenerationCoroutine;
+        private CharacterBlood  _characterBlood;
+        private Coroutine       _regenerationCoroutine;
 
         protected override void Start()
         {
             base.Start();
 
-            characterBloodlust = GetComponent<CharacterBloodlust>();
-            if (characterBloodlust != null)
-            {
-                characterBloodlust.OnBloodlustChange += OnBloodlustChangeHandler;
-            }
+            _characterBlood = GetComponent<CharacterBlood>();
 
             OnHealthChange += OnHealthChangeHandler;
         }
+
+        public override void TakeDamage(int damage)
+        {
+            if (!_characterController.isDead)
+            {
+                if (_characterBlood.Blood <= 0)
+                    base.TakeDamage(damage);
+                else 
+                    _characterBlood.TakeBlood(damage);
+            }  
+        }
+
 
         private void OnHealthChangeHandler(int newHealth)
         {
@@ -32,62 +40,13 @@ namespace WayOfBlood.Character.Player
                 GetComponent<PlayerController>().Die();
                 return;
             }
-
-            if (Health < MaxHealth && characterBloodlust.Bloodlust >= CostBloodlust)
-            {
-                // Если здоровье изменилось, перезапускаем корутину регенерации
-                if (regenerationCoroutine != null)
-                {
-                    StopCoroutine(regenerationCoroutine);
-                    regenerationCoroutine = null;
-                }
-                regenerationCoroutine = StartCoroutine(RegenerateHealth());
-            }
-        }
-
-        private void OnBloodlustChangeHandler(int newBloodlust)
-        {
-            if (Health < MaxHealth && characterBloodlust.Bloodlust >= CostBloodlust)
-            {
-                if (regenerationCoroutine == null)
-                    regenerationCoroutine = StartCoroutine(RegenerateHealth());
-            }
-        }
-
-        private IEnumerator RegenerateHealth()
-        {
-            yield return new WaitForSeconds(RegenerationTime);
-
-            // Проверяем условия для регенерации
-            if (Health < MaxHealth && characterBloodlust.Bloodlust >= CostBloodlust)
-            {
-                // Добавляем 1 HP и тратим жажду крови
-                AddHealth(1);
-                characterBloodlust.TakeBloodlust(CostBloodlust);
-            }
-
-            regenerationCoroutine = null;
-            yield return null;
         }
 
         protected override void OnDestroy()
         {
             base.OnDestroy();
-
-            // Отписываемся от событий при уничтожении объекта
-            if (characterBloodlust != null)
-            {
-                characterBloodlust.OnBloodlustChange -= OnBloodlustChangeHandler;
-            }
-
+            
             OnHealthChange -= OnHealthChangeHandler;
-
-            // Останавливаем корутину, если она активна
-            if (regenerationCoroutine != null)
-            {
-                StopCoroutine(regenerationCoroutine);
-                regenerationCoroutine = null;
-            }
         }
     }
 }

@@ -1,45 +1,41 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using WayOfBlood.Character;
 
 namespace WayOfBlood.UI
 {
     public class HealthUI : MonoBehaviour
     {
-        public GameObject HpPrefab; // Префаб иконки здоровья
-        public Vector3 HpOffset;    // Смещение между иконками
+        public Image HP;
+        public Image[] S;
 
         private CharacterHealth _playerHealth; // Ссылка на здоровье игрока
-        private List<GameObject> _hpIcons;
+        private CharacterBlood _playerBlood;
 
         private void Start()
         {
-            _hpIcons = new List<GameObject>();
-
             // Находим игрока по тегу
             var player = GameObject.FindGameObjectWithTag("Player");
-            if (player != null && HpPrefab != null)
+            if (player != null)
             {
                 // Получаем компонент CharacterHealth
                 _playerHealth = player.GetComponent<CharacterHealth>();
-                if (_playerHealth != null)
+                _playerBlood = player.GetComponent<CharacterBlood>();
+                if (_playerHealth != null && _playerBlood != null)
                 {
                     // Подписываемся на события изменения здоровья
                     _playerHealth.OnHealthChange += OnHealthChange;
-                    _playerHealth.OnMaxHealthChange += OnMaxHealthChange;
-
-                    // Инициализируем UI при старте
-                    OnMaxHealthChange(_playerHealth.MaxHealth);
-                    OnHealthChange(_playerHealth.Health);
+                    _playerBlood.OnBloodChange += OnBloodChange;
                 }
                 else
                 {
-                    Debug.LogError("CharacterHealth component not found on player!");
+                    Debug.LogError("CharacterHealth or CharacterBlood component not found on player!");
                 }
             }
             else
             {
-                Debug.LogError("Player or HpPrefab is not assigned!");
+                Debug.LogError("Player is not assigned!");
             }
         }
 
@@ -49,37 +45,49 @@ namespace WayOfBlood.UI
             if (_playerHealth != null)
             {
                 _playerHealth.OnHealthChange -= OnHealthChange;
-                _playerHealth.OnMaxHealthChange -= OnMaxHealthChange;
+                _playerBlood.OnBloodChange -= OnBloodChange;
+            }
+        }
+
+        private void OnBloodChange(int newValue)
+        {
+            for (int i = 0; i < S.Length; i++)
+            {
+                S[i].fillAmount = 0;
+            }
+
+            if (newValue == 0)
+                return;
+
+            for (int i = 1; i <= S.Length; i++)
+            {
+                if (i * 2 < newValue)
+                {
+                    S[i - 1].fillAmount = 1;
+                }
+                else if (i * 2 == newValue)
+                {
+                    S[i - 1].fillAmount = 1;
+                    break;
+                }
+                else
+                {
+                    S[i - 1].fillAmount = 0.5f;
+                    break;
+                }
             }
         }
 
         private void OnHealthChange(int newValue)
         {
-            // Активируем или деактивируем дочерние объекты в зависимости от текущего здоровья
-            for (int i = 0; i < _hpIcons.Count; i++)
+            if (newValue == 0)
             {
-                _hpIcons[i].SetActive(i < newValue);
+                HP.gameObject.SetActive(false);
             }
-        }
-
-        private void OnMaxHealthChange(int newValue)
-        {
-            // Удаляем все дочерние объекты
-            foreach (GameObject go in _hpIcons)
+            else
             {
-                Destroy(go);
+                HP.gameObject.SetActive(true);
             }
-
-            // Создаем новые иконки здоровья
-            for (int i = 0; i < newValue; i++)
-            {
-                var go = Instantiate(HpPrefab, transform);
-                go.transform.localPosition = HpOffset * i;
-                _hpIcons.Add(go);
-            }
-
-            // Обновляем текущее состояние здоровья
-            OnHealthChange(_playerHealth.Health);
         }
     }
 }

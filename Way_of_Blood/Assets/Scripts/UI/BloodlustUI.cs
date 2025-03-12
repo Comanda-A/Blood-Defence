@@ -9,19 +9,19 @@ namespace WayOfBlood.UI
     {
         [SerializeField] private Image bloodlustStripe;
 
-        private CharacterBloodlust characterBloodlust;
+        private CharacterBlood characterBloodlust;
 
         private void Start()
         {
             var player = GameObject.FindGameObjectWithTag("Player");
             if (player != null && bloodlustStripe != null)
             {
-                characterBloodlust = player.GetComponent<CharacterBloodlust>();
+                characterBloodlust = player.GetComponent<CharacterBlood>();
                 if (characterBloodlust != null)
                 {
-                    characterBloodlust.OnBloodlustChange += UpdateBloodlustStripe;
-                    characterBloodlust.OnMaxBloodlustChange += UpdateBloodlustStripe;
-                    UpdateBloodlustStripe(characterBloodlust.Bloodlust);
+                    characterBloodlust.OnBloodChange += UpdateBloodlustStripe;
+                    characterBloodlust.OnMaxBloodChange += UpdateBloodlustStripe;
+                    UpdateBloodlustStripe(characterBloodlust.Blood);
                 }
                 else
                 {
@@ -36,7 +36,7 @@ namespace WayOfBlood.UI
 
         private void UpdateBloodlustStripe(int value)
         {
-            bloodlustStripe.fillAmount = (float)characterBloodlust.Bloodlust / characterBloodlust.MaxBloodlust;
+            bloodlustStripe.fillAmount = (float)characterBloodlust.Blood / characterBloodlust.MaxBlood;
         }
     }
 }

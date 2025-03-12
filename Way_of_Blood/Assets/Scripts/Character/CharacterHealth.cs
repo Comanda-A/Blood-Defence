@@ -22,20 +22,20 @@ namespace WayOfBlood.Character
             get { return _health;  }
         }
 
-        private CharacterController _characterController;
+        protected CharacterController _characterController;
 
         protected virtual void Start()
         {
             _characterController = GetComponent<CharacterController>();
         }
 
-        public void AddHealth(int value)
+        public virtual void AddHealth(int value)
         {
             if (!_characterController.isDead)
                 Health = Health + value <= MaxHealth ? Health + value : MaxHealth;
         }
 
-        public void TakeDamage(int damage)
+        public virtual void TakeDamage(int damage)
         {
             if (!_characterController.isDead)
                 Health = Health >= damage ? Health - damage : 0;
