@@ -63,22 +63,8 @@ namespace WayOfBlood.Character.Player
             if (Time.time < lastShotTime + ShotCooldown || _playerBlood.Blood == 0)
                 return;
 
-            Vector2 direction = Vector2.zero;
-
-            if (context.control.device is Mouse)
-            {
-                // Стрельба в сторону курсора мыши
-                Vector3 mousePosition = _mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-                direction = ((Vector2)(mousePosition - _transform.position)).normalized;
-            }
-            else
-            {
-                // Стрельба в сторону движения или авто-прицеливание
-                direction = _playerMovement.ViewDirection;
-            }
-
             _playerBlood.TakeBlood(1);
-            Shot((Vector2)_transform.position + direction * BulletRadiusAtShot, direction);
+            Shot((Vector2)_transform.position + _playerMovement.ViewDirection * BulletRadiusAtShot, _playerMovement.ViewDirection);
         }
 
         private void ChangeShootingModeHandler(InputAction.CallbackContext context)

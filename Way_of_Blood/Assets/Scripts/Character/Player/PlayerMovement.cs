@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
 using UnityEngine.EventSystems;
+using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 namespace WayOfBlood.Character.Player
 {
@@ -12,6 +13,7 @@ namespace WayOfBlood.Character.Player
 
         private InputAction _moveAction;
         private Joystick _joystick;
+        private Transform _transform;
         private Transform _autoAimTarget;
 
         private float _aimLockStrength = 0.5f;  // Сила доводки прицела
@@ -19,17 +21,15 @@ namespace WayOfBlood.Character.Player
         protected override void Start()
         {
             base.Start();
+            _transform = GetComponent<Transform>();
             _moveAction = InputSystem.actions.FindAction("Move");
             _joystick = GameObject.FindGameObjectWithTag("Joystick")?.GetComponent<Joystick>();
         }
 
         protected override void Update()
         {
-            Vector2 moveDirection = GetMoveDirectionInput();
-
-            MoveDirection = moveDirection;
-
-            ViewDirection = CalculateViewDirection(moveDirection);
+            MoveDirection = GetMoveDirectionInput();
+            ViewDirection = CalculateViewDirection(GetViewDirectionInput());
 
             base.Update();
         }
@@ -106,6 +106,25 @@ namespace WayOfBlood.Character.Player
             else
                 return _moveAction.ReadValue<Vector2>().normalized;
         }
+
+        public Vector2 GetViewDirectionInput()
+        {
+            Vector2 direction = Vector2.zero;
+
+            if (Gamepad.current != null && Gamepad.current.leftStick.ReadValue().sqrMagnitude > 0.1f)
+            {
+                // Стрельба в сторону движения
+                direction = MoveDirection;
+            }
+            else
+            {
+                Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+                direction = ((Vector2)(mousePosition - _transform.position)).normalized;
+            }
+
+            return direction;
+        }
+
 
         [Serializable]
         public enum ViewDirectionMode
