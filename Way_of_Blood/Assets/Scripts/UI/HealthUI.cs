@@ -2,46 +2,54 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using WayOfBlood.Character;
+using WayOfBlood.Character.Player;
 
 namespace WayOfBlood.UI
 {
     public class HealthUI : MonoBehaviour
     {
-        public Image HP;
-        public Image[] S;
+        [SerializeField] private GameObject hpPrefab;
+        [SerializeField] private GameObject shieldPrefab;
+        [SerializeField] private Transform uiContainer; // Контейнер для HP и щитов
 
-        private CharacterHealth _playerHealth; // Ссылка на здоровье игрока
-        private CharacterBlood _playerBlood;
+        [SerializeField] private Vector2 startPosition = new Vector2(50, 50);
+        [SerializeField] private Vector2 offset = new Vector2(50, 0);
+
+        private List<Image> hpIcons = new List<Image>();
+        private List<Image> shieldIcons = new List<Image>();
+
+        private PlayerHealth _playerHealth;
+        private PlayerBlood _playerBlood;
 
         private void Start()
         {
-            // Находим игрока по тегу
             var player = GameObject.FindGameObjectWithTag("Player");
+
             if (player != null)
             {
-                // Получаем компонент CharacterHealth
-                _playerHealth = player.GetComponent<CharacterHealth>();
-                _playerBlood = player.GetComponent<CharacterBlood>();
+                _playerHealth = player.GetComponent<PlayerHealth>();
+                _playerBlood = player.GetComponent<PlayerBlood>();
+
                 if (_playerHealth != null && _playerBlood != null)
                 {
-                    // Подписываемся на события изменения здоровья
                     _playerHealth.OnHealthChange += OnHealthChange;
                     _playerBlood.OnBloodChange += OnBloodChange;
+
+                    InitUI();
                 }
                 else
                 {
-                    Debug.LogError("CharacterHealth or CharacterBlood component not found on player!");
+                    Debug.LogError("PlayerHealth или PlayerBlood не найдены!");
                 }
             }
             else
             {
-                Debug.LogError("Player is not assigned!");
+                Debug.LogError("Игрок не найден!");
             }
         }
 
         private void OnDestroy()
         {
-            // Отписываемся от событий при уничтожении объекта
             if (_playerHealth != null)
             {
                 _playerHealth.OnHealthChange -= OnHealthChange;
@@ -49,44 +57,73 @@ namespace WayOfBlood.UI
             }
         }
 
-        private void OnBloodChange(int newValue)
+        private void InitUI()
         {
-            for (int i = 0; i < S.Length; i++)
+            // Создаем иконки здоровья
+            for (int i = 0; i < _playerHealth.MaxHealth; i++)
             {
-                S[i].fillAmount = 0;
+                GameObject hpObj = Instantiate(hpPrefab, uiContainer);
+                hpObj.GetComponent<RectTransform>().anchoredPosition = startPosition + i * offset;
+                hpIcons.Add(hpObj.GetComponent<Image>());
             }
 
-            if (newValue == 0)
-                return;
-
-            for (int i = 1; i <= S.Length; i++)
+            // Создаем иконки щитов
+            for (int i = 0; i < _playerHealth.ShieldsCount; i++)
             {
-                if (i * 2 < newValue)
-                {
-                    S[i - 1].fillAmount = 1;
-                }
-                else if (i * 2 == newValue)
-                {
-                    S[i - 1].fillAmount = 1;
-                    break;
-                }
-                else
-                {
-                    S[i - 1].fillAmount = 0.5f;
-                    break;
-                }
+                GameObject shieldObj = Instantiate(shieldPrefab, uiContainer);
+                shieldObj.GetComponent<RectTransform>().anchoredPosition = startPosition + (_playerHealth.MaxHealth + i) * offset;
+                shieldObj.SetActive(false);
+                shieldIcons.Add(shieldObj.GetComponent<Image>());
             }
+
+            UpdateHealthUI();
+            UpdateShieldUI();
         }
 
         private void OnHealthChange(int newValue)
         {
-            if (newValue == 0)
+            UpdateHealthUI();
+            UpdateShieldUI();
+        }
+
+        private void OnBloodChange(int newValue)
+        {
+            UpdateShieldUI();
+        }
+
+        private void UpdateHealthUI()
+        {
+            for (int i = 0; i < hpIcons.Count; i++)
             {
-                HP.gameObject.SetActive(false);
+                hpIcons[i].enabled = i < _playerHealth.Health;
             }
-            else
+        }
+
+        private void UpdateShieldUI()
+        {
+            int shieldsActive = _playerHealth.ShieldsCount;
+            int availableBlood = _playerBlood.Blood;
+            int shieldCost = _playerHealth.ShieldCost;
+
+            for (int i = 0; i < shieldIcons.Count; i++)
             {
-                HP.gameObject.SetActive(true);
+                if (i < shieldsActive)
+                {
+                    shieldIcons[i].gameObject.SetActive(true);
+
+                    float fillAmount = 1f;
+                    if (availableBlood < shieldCost)
+                    {
+                        fillAmount = (float)availableBlood / shieldCost;
+                    }
+
+                    shieldIcons[i].fillAmount = fillAmount;
+                    availableBlood -= shieldCost;
+                }
+                else
+                {
+                    shieldIcons[i].gameObject.SetActive(false);
+                }
             }
         }
     }

@@ -6,8 +6,20 @@ namespace WayOfBlood.Character
 {
     public class CharacterMovement : MonoBehaviour
     {
+        /// <summary>
+        /// Вызывается каждый раз при изменении вектора направления взгляда (Vector2 ViewDirection).
+        /// </summary>
         public event UnityAction<Vector2> OnViewDirectionChanged;
+
+        /// <summary>
+        /// Вызывается каждый раз при изменении вектора перемещения (Vector2 MoveDirection).
+        /// </summary>
         public event UnityAction<Vector2> OnMoveDirectionChanged;
+
+        /// <summary>
+        /// Вызывается при перемещении сущности (MoveDirection != Vector2.Zero).
+        /// </summary>
+        public event UnityAction<Vector2> OnMoving;
 
         [Header("Movement parameters")]
         public float DefaultSpeed;              // Скорость по умолчанию
@@ -15,8 +27,12 @@ namespace WayOfBlood.Character
         public float CurrentSpeed;              // Скорость
         public float CurrentAcceleration;       // Ускорение
 
-        private bool _closedViewDirection;  // Закрыть на изменение направления просмотра (перекаты, отталкивания)
-        private Vector2 _viewDirection;
+        private bool _closedViewDirection;              // Закрыть на изменение направления просмотра (перекаты, отталкивания)
+        private Vector2 _viewDirection = Vector2.zero;  // ViewDirection
+
+        /// <summary>
+        /// Направление взгляда.
+        /// </summary>
         public Vector2 ViewDirection
         {
             protected set
@@ -31,8 +47,12 @@ namespace WayOfBlood.Character
             get { return _viewDirection; }
         }
 
-        private bool _closedMoveDirection; // Закрыть на изменение направления движения (перекаты, отталкивания)
-        private Vector2 _moveDirection;
+        private bool _closedMoveDirection;              // Закрыть на изменение направления движения (перекаты, отталкивания)
+        private Vector2 _moveDirection = Vector2.zero;  // MoveDirection
+
+        /// <summary>
+        /// Направление движения.
+        /// </summary>
         public Vector2 MoveDirection
         {
             protected set
@@ -47,28 +67,55 @@ namespace WayOfBlood.Character
             get { return _moveDirection; }
         }
 
-        protected new Rigidbody2D rigidbody2D;
+        protected Rigidbody2D _rigidbody2D;
 
-        private bool _defaultOnCompletion;          // Дефолт при завершении
-        private float _closedChangesTime;           // Время запрета изменений
-        private Coroutine _closedChangesCoroutine;  // Корутина
+        // Постоянное перемещение (перекаты, ускорения)
+        // Дефолтные параметры при завершении постоянного перемещения
+        private bool _defaultOnCompletionForcedMovement;
+        private float _forcedMovementTime;           // Время запрета изменений
+        private Coroutine _forcedMovementCoroutine;  // Корутина
 
         protected virtual void Start()
         {
-            rigidbody2D = GetComponent<Rigidbody2D>();
+            _rigidbody2D = GetComponent<Rigidbody2D>();
             _closedMoveDirection = false;
             _closedViewDirection = false;
             SetDefaultParameters();
         }
 
+        protected virtual void Update()
+        {
+            if (MoveDirection != Vector2.zero)
+                OnMoving?.Invoke(MoveDirection);
+        }
+
         protected virtual void FixedUpdate()
         {
             Vector2 targetVelocity = MoveDirection * CurrentSpeed;
-            rigidbody2D.linearVelocity = Vector2.Lerp(
-                rigidbody2D.linearVelocity, targetVelocity, Time.fixedDeltaTime * CurrentAcceleration);
+            _rigidbody2D.linearVelocity = Vector2.Lerp(
+                _rigidbody2D.linearVelocity, targetVelocity, Time.fixedDeltaTime * CurrentAcceleration);
         }
 
-        public void SetConstantDirection(       // Установить движение
+        /// <summary>
+        /// Устанавливает доступ к изменениям MoveDirection. true - изменения доступны, false - изменения закрыты
+        /// </summary>
+        /// <param name="value"></param>
+        public void SetMoveDirectionForChanges(bool value, Vector2 moveDirection)
+        {
+            MoveDirection = moveDirection;
+            _closedMoveDirection = !value;
+        }
+
+        /// <summary>
+        /// Установить постоянное движение в определенном направлении.
+        /// </summary>
+        /// <param name="move">Направление перемещения</param>
+        /// <param name="view">Направление взгляда</param>
+        /// <param name="time">Время перемещения (длительность)</param>
+        /// <param name="speed">Скорость</param>
+        /// <param name="acceleration">Ускорение</param>
+        /// <param name="defaultOnCompletion">Вернуть параметры обратно при завершении</param>
+        public void SetForcedMovement(
             Vector2 move,
             Vector2 view,
             float time,
@@ -80,11 +127,11 @@ namespace WayOfBlood.Character
             ViewDirection = view;
             CurrentSpeed = speed;
             CurrentAcceleration = acceleration;
-            _closedChangesTime = time;
-            _defaultOnCompletion = defaultOnCompletion;
+            _forcedMovementTime = time;
+            _defaultOnCompletionForcedMovement = defaultOnCompletion;
             _closedMoveDirection = true;
             _closedViewDirection = true;
-            _closedChangesCoroutine = StartCoroutine(CloseChangeDirectionsHandler());
+            _forcedMovementCoroutine = StartCoroutine(ForcedMovementHandler());
         }
 
         public void SetDefaultParameters()
@@ -95,14 +142,14 @@ namespace WayOfBlood.Character
             ViewDirection = Vector2.down;
         }
 
-        private IEnumerator CloseChangeDirectionsHandler()
+        private IEnumerator ForcedMovementHandler()
         {
-            yield return new WaitForSeconds(_closedChangesTime);
+            yield return new WaitForSeconds(_forcedMovementTime);
 
             _closedMoveDirection = false;
             _closedViewDirection = false;
 
-            if (_defaultOnCompletion)
+            if (_defaultOnCompletionForcedMovement)
                 SetDefaultParameters();
 
             yield break;
@@ -112,6 +159,7 @@ namespace WayOfBlood.Character
         {
             OnViewDirectionChanged = null;
             OnMoveDirectionChanged = null;
+            OnMoving = null;
         }
     }
 }

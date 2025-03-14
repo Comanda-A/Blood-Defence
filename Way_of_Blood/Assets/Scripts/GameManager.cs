@@ -31,5 +31,10 @@ namespace WayOfBlood.GameManager
         {
             playerController.OnDeath -= OnDeathPlayer;
         }
+
+        public void QuitGame()
+        {
+            Application.Quit();
+        }
     }
 }

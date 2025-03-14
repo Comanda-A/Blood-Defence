@@ -9,8 +9,6 @@ namespace WayOfBlood.Character.Enemy
         public float SafeDistance = 3f;                 // Минимальная дистанция до игрока
         public float CircleSpeed = 2f;                  // Скорость движения вокруг игрока
 
-        public AudioClip audioClip;
-
         protected CharacterMovement _playerMovement;
         protected EnemyShot _enemyShot;
 
@@ -19,9 +17,6 @@ namespace WayOfBlood.Character.Enemy
             base.Start();
             _enemyShot = GetComponent<EnemyShot>();
             _playerMovement = _player.GetComponent<CharacterMovement>();
-            GetComponent<CharacterHealth>().OnHealthChange += (int value) => {
-                GetComponent<CharacterSound>().PlaySound(audioClip);
-            };
         }
 
         private void Update()

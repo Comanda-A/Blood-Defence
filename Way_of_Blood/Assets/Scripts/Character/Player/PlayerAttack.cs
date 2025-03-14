@@ -8,13 +8,13 @@ namespace WayOfBlood.Character.Player
         [Header("Bloodlust bonus on the kill")]
         public int BloodBonusOnKill = 1;
 
-        private PlayerBloodlust playerBloodlust;
+        private PlayerBlood playerBloodlust;
         private InputAction attackAction;
 
         protected override void Start()
         {
             base.Start();
-            playerBloodlust = GetComponent<PlayerBloodlust>();
+            playerBloodlust = GetComponent<PlayerBlood>();
             attackAction = InputSystem.actions.FindAction("Attack");
             attackAction.performed += AttackHandler;
             OnDamage += DamageHandler;

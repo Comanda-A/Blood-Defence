@@ -79,7 +79,7 @@ namespace WayOfBlood.Character
 
                     if (target.TryGetComponent<CharacterMovement>(out var component))
                     {
-                        component.SetConstantDirection(
+                        component.SetForcedMovement(
                             target.position - transform.position,
                             component.ViewDirection,
                             DurationKickTarget,

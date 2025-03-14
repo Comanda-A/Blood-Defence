@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace WayOfBlood.Character.Player
 {
-    public class PlayerBloodlust : CharacterBlood
+    public class PlayerBlood : CharacterBlood
     {
 
     }

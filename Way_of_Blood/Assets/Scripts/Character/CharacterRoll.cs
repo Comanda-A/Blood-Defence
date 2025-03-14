@@ -34,7 +34,7 @@ namespace WayOfBlood.Character
 
         protected virtual void ProcessRoll()
         {
-            characterMovement.SetConstantDirection(
+            characterMovement.SetForcedMovement(
                 characterMovement.MoveDirection,
                 characterMovement.ViewDirection,
                 RollDuration,

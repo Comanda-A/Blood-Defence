@@ -5,83 +5,65 @@ namespace WayOfBlood.Character
 {
     public class CharacterSound : MonoBehaviour
     {
+        [Header("The sound of footsteps")]
         public AudioClip StepAudio1;    // Звук шага
         public AudioClip StepAudio2;    // Звук шага
+
+        [Header("The sound of a katana strike")]
         public AudioClip AttackAudio;   // Звук атаки
+
+        [Header("Sound of gunfire")]
         public AudioClip ShotAudio;     // Звук выстрела
+
+        [Header("The sound of kicking")]
         public AudioClip KickAudio;     // Звук выстрела
 
-        [SerializeField] private AudioSource audioSource;
-
-        private bool isPlayingStepSound = false;    // Флаг для отслеживания воспроизведения звука шагов
-        private bool useStepAudio1 = true;          // Флаг для чередования звуков шагов
-        private CharacterMovement characterMovement;
+        private AudioSource _audioSource;               // AudioSource
+        private CharacterMovement _characterMovement;   // Для отслеживания перемещения персонажа
+        private bool _isPlayingStepSound = false;       // Флаг для отслеживания воспроизведения звука шагов
+        private bool _useStepAudio1 = true;             // Флаг для чередования звуков шагов
 
         protected virtual void Start()
         {
-            if (audioSource == null)
-            {
-                audioSource = gameObject.AddComponent<AudioSource>();
-            }
+            _audioSource = GetComponent<AudioSource>();
 
             // Подписываемся на событие движения
-            characterMovement = GetComponent<CharacterMovement>();
+            _characterMovement = GetComponent<CharacterMovement>();
+
+            // Подписываемся на событие перемещения
+            if (TryGetComponent<CharacterMovement>(out var componentMovement) 
+                && StepAudio1 != null && StepAudio2 != null)
+                componentMovement.OnMoving += PlayStepSound;
 
             // Подписываемся на событие атаки
-            GetComponent<CharacterAttack>().OnAttack += PlayAttackSound;
+            if (TryGetComponent<CharacterAttack>(out var componentAttack) && AttackAudio != null)
+                componentAttack.OnAttack += PlayAttackSound;
 
             // Подписываемся на событие выстрела
-            GetComponent<CharacterShot>().OnShot += PlayShotSound;
+            if (TryGetComponent<CharacterShot>(out var componentShot) && ShotAudio != null)
+                componentShot.OnShot += PlayShotSound;
 
-            if (TryGetComponent<СharacterKick>(out var сharacterKick))
-            {
-                сharacterKick.OnKick += PlayKickSound;
-            }
+            // Подписываемся на событие удара ногой
+            if (TryGetComponent<СharacterKick>(out var componentKick) && KickAudio != null)
+                componentKick.OnKick += PlayKickSound;
         }
 
-        private void Update()
-        {
-            if (characterMovement.MoveDirection != null)
-                PlayStepSound();
-        }
-
-        public void PlaySound(AudioClip audio)
-        {
-            audioSource.PlayOneShot(audio);
-        }    
+        public void PlayOneShot(AudioClip clip) => _audioSource.PlayOneShot(clip);
 
         // Метод для воспроизведения звука удара ногой
-        public void PlayKickSound()
-        {
-            if (KickAudio != null)
-            {
-                audioSource.PlayOneShot(KickAudio);
-            }
-        }
+        public void PlayKickSound() => PlayOneShot(KickAudio);
 
         // Метод для воспроизведения звука атаки
-        public void PlayShotSound()
-        {
-            if (ShotAudio != null)
-            {
-                audioSource.PlayOneShot(ShotAudio);
-            } 
-        }
+        public void PlayShotSound() => PlayOneShot(ShotAudio);
 
         // Метод для воспроизведения звука атаки
-        public void PlayAttackSound()
-        {
-            if (AttackAudio != null)
-            {
-                audioSource.PlayOneShot(AttackAudio);
-            }  
-        }
+        public void PlayAttackSound() => PlayOneShot(AttackAudio);
 
         // Метод для воспроизведения звука шагов
-        public void PlayStepSound()
+        public void PlayStepSound(Vector2 vector2)
         {
             // Если звук уже воспроизводится, выходим из метода
-            if (isPlayingStepSound)
+            if (_isPlayingStepSound)
             {
                 return;
             }
@@ -89,7 +71,7 @@ namespace WayOfBlood.Character
             // Выбираем звук для воспроизведения
             AudioClip stepClip;
             if (StepAudio1 != null & StepAudio2 != null)
-                stepClip = useStepAudio1 ? StepAudio1 : StepAudio2;
+                stepClip = _useStepAudio1 ? StepAudio1 : StepAudio2;
             else if (StepAudio1 != null)
                 stepClip = StepAudio1;
             else if (StepAudio2 != null)
@@ -97,13 +79,13 @@ namespace WayOfBlood.Character
             else
                 return;
 
-            useStepAudio1 = !useStepAudio1; // Меняем флаг для следующего шага
+            _useStepAudio1 = !_useStepAudio1; // Меняем флаг для следующего шага
 
             // Воспроизводим звук
-            audioSource.PlayOneShot(stepClip);
+            _audioSource.PlayOneShot(stepClip);
 
             // Устанавливаем флаг, что звук воспроизводится
-            isPlayingStepSound = true;
+            _isPlayingStepSound = true;
 
             // Запускаем корутину для сброса флага после завершения звука
             StartCoroutine(ResetStepSoundFlag(stepClip.length));
@@ -113,7 +95,24 @@ namespace WayOfBlood.Character
         private IEnumerator ResetStepSoundFlag(float clipLength)
         {
             yield return new WaitForSeconds(clipLength);
-            isPlayingStepSound = false;
+            _isPlayingStepSound = false;
+        }
+
+        private void OnDestroy()
+        {
+            // Отписываемся при уничтожении компонента
+
+            if (TryGetComponent<CharacterMovement>(out var componentMovement))
+                componentMovement.OnMoving -= PlayStepSound;
+
+            if (TryGetComponent<CharacterAttack>(out var componentAttack))
+                componentAttack.OnAttack -= PlayAttackSound;
+
+            if (TryGetComponent<CharacterShot>(out var componentShot))
+                componentShot.OnShot -= PlayShotSound;
+
+            if (TryGetComponent<СharacterKick>(out var componentKick))
+                componentKick.OnKick -= PlayKickSound;
         }
     }
 }
