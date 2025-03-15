@@ -1,8 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
-using UnityEngine.EventSystems;
-using static UnityEditor.Timeline.TimelinePlaybackControls;
+using WayOfBlood.ControlInputSystem;
 
 namespace WayOfBlood.Character.Player
 {
@@ -12,6 +11,7 @@ namespace WayOfBlood.Character.Player
         public ViewDirectionMode ViewDirectionSetting = ViewDirectionMode.FourDirections;
 
         private InputAction _moveAction;
+        private ControlInput _controlInput;
         private Joystick _joystick;
         private Transform _transform;
         private Transform _autoAimTarget;
@@ -21,7 +21,9 @@ namespace WayOfBlood.Character.Player
         protected override void Start()
         {
             base.Start();
+
             _transform = GetComponent<Transform>();
+            _controlInput = GetComponent<ControlInput>();
             _moveAction = InputSystem.actions.FindAction("Move");
             _joystick = GameObject.FindGameObjectWithTag("Joystick")?.GetComponent<Joystick>();
         }
@@ -96,33 +98,36 @@ namespace WayOfBlood.Character.Player
         }
 
         /// <summary>
-        /// Ввод направление движения (MoveAction).
+        /// Ввод направление движения (InputAction->MoveAction).
         /// </summary>
         /// <returns>Направление движения</returns>
         public Vector2 GetMoveDirectionInput()
         {
-            if (_joystick != null)
-                return _joystick.Direction.normalized;
-            else
-                return _moveAction.ReadValue<Vector2>().normalized;
+            switch(_controlInput.CurrentInputType)
+            {
+                case ControlInput.InputType.Keyboard:
+                case ControlInput.InputType.Gamepad:
+                    return _moveAction.ReadValue<Vector2>().normalized;
+                case ControlInput.InputType.Touch:
+                    return _joystick.Direction.normalized;
+                default:
+                    return Vector2.zero;
+            }
         }
 
         public Vector2 GetViewDirectionInput()
         {
             Vector2 direction = Vector2.zero;
 
-            if (Gamepad.current != null && Gamepad.current.leftStick.ReadValue().sqrMagnitude > 0.1f)
+            switch (_controlInput.CurrentInputType)
             {
-                // Стрельба в сторону движения
-                direction = MoveDirection;
+                case ControlInput.InputType.Keyboard:
+                case ControlInput.InputType.Gamepad:
+                case ControlInput.InputType.Touch:
+                    return MoveDirection;
+                default:
+                    return Vector2.zero;
             }
-            else
-            {
-                Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-                direction = ((Vector2)(mousePosition - _transform.position)).normalized;
-            }
-
-            return direction;
         }
 
 

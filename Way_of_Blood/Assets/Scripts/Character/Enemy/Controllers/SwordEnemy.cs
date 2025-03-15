@@ -19,7 +19,7 @@ namespace WayOfBlood.Character.Enemy
 
         private void Update()
         {
-            if (_player == null || isDead)
+            if (_player == null || IsDead)
             {
                 _enemyMovement.StopMovement();
                 return;

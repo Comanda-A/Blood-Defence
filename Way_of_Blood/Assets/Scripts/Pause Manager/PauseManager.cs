@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-namespace PauseManagement
+namespace WayOfBlood.PauseManagement
 {
 	public class PauseManager : MonoBehaviour
 	{

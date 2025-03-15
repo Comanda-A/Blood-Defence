@@ -56,7 +56,7 @@ namespace WayOfBlood.Character
                     // Ќаносим урон первому найденному врагу
                     if (enemy.TryGetComponent<CharacterHealth>(out var enemyHealth) &&
                         enemy.TryGetComponent<CharacterController>(out var controller) &&
-                        !controller.isDead)
+                        !controller.IsDead)
                     {
                         enemyHealth.TakeDamage(AttackDamage);
                         OnDamage?.Invoke(enemyHealth);

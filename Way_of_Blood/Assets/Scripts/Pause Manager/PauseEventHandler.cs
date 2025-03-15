@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace PauseManagement
+namespace WayOfBlood.PauseManagement
 {
 	public class PauseEventHandler : MonoBehaviour
 	{

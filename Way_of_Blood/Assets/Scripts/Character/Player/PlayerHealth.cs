@@ -23,7 +23,7 @@ namespace WayOfBlood.Character.Player
 
         public override void TakeDamage(int damage)
         {
-            if (!_characterController.isDead)
+            if (!_characterController.IsDead)
             {
                 if (_characterBlood.Blood <= 0)
                     base.TakeDamage(damage);

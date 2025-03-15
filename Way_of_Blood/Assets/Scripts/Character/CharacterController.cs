@@ -5,20 +5,29 @@ namespace WayOfBlood.Character
 {
     public class CharacterController : MonoBehaviour
     {
+        /// <summary>
+        /// Событие, вызываемое при смерти сущности.
+        /// </summary>
         public event UnityAction OnDeath;
 
-        public bool isDead { private set; get; }
+        /// <summary>
+        /// Сущность погибла.
+        /// </summary>
+        public bool IsDead { private set; get; }
 
         protected virtual void Start()
         {
-            isDead = false;
+            IsDead = false;
         }
 
+        /// <summary>
+        /// Убить сущьность.
+        /// </summary>
         public virtual void Die()
         {
-            if (!isDead)
+            if (!IsDead)
             {
-                isDead = true;
+                IsDead = true;
                 OnDeath?.Invoke(); 
             }        
         }

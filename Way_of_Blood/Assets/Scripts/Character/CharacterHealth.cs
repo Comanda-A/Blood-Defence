@@ -31,13 +31,13 @@ namespace WayOfBlood.Character
 
         public virtual void AddHealth(int value)
         {
-            if (!_characterController.isDead)
+            if (!_characterController.IsDead)
                 Health = Health + value <= MaxHealth ? Health + value : MaxHealth;
         }
 
         public virtual void TakeDamage(int damage)
         {
-            if (!_characterController.isDead)
+            if (!_characterController.IsDead)
                 Health = Health >= damage ? Health - damage : 0;
         }
 
